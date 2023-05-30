@@ -89,9 +89,35 @@ export type CardCompany =
   | 'NH_CARD';
 export type DiscountRateMapType = 'BASIC' | 'SPECIAL';
 export type DiscountRateType = 'SALES' | 'PURCHASE';
-export type SecurityStatus = 'NONE' | 'ENDORSED' | 'NORMAL_PAYMENT' | 'DISCOUNT_PAYMENT' | 'INSOLVENCY' | 'LOST' | 'SAFEKEEPING';
-export type SecurityType = 'PROMISSORY_NOTE' | 'ELECTRONIC_NOTE' | 'ELECTRONIC_BOND' | 'PERSONAL_CHECK' | 'DEMAND_DRAFT' | 'HOUSEHOLD_CHECK' | 'STATIONERY_NOTE' | 'ETC';
+export type SecurityStatus =
+  | 'NONE'
+  | 'ENDORSED'
+  | 'NORMAL_PAYMENT'
+  | 'DISCOUNT_PAYMENT'
+  | 'INSOLVENCY'
+  | 'LOST'
+  | 'SAFEKEEPING';
+export type SecurityType =
+  | 'PROMISSORY_NOTE'
+  | 'ELECTRONIC_NOTE'
+  | 'ELECTRONIC_BOND'
+  | 'PERSONAL_CHECK'
+  | 'DEMAND_DRAFT'
+  | 'HOUSEHOLD_CHECK'
+  | 'STATIONERY_NOTE'
+  | 'ETC';
 export type DrawedStatus = 'SELF' | 'ACCOUNTED';
 export type EndorsementType = 'NONE' | 'SELF_NOTE' | 'OTHERS_NOTE';
 export type ShippingStatus = 'PREPARING' | 'PROGRESSING' | 'DONE';
 export type DepositType = 'SALES' | 'PURCHASE';
+export type PlanType =
+  | 'INHOUSE_CREATE'
+  | 'INHOUSE_MODIFY'
+  | 'INHOUSE_RELOCATION'
+  | 'INHOUSE_PROCESS'
+  | 'TRADE_NORMAL_SELLER'
+  | 'TRADE_NORMAL_BUYER'
+  | 'TRADE_WITHDRAW_SELLER'
+  | 'TRADE_WITHDRAW_BUYER'
+  | 'TRADE_OUTSOURCE_PROCESS_SELLER'
+  | 'TRADE_OUTSOURCE_PROCESS_BUYER';
