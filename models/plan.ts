@@ -1,4 +1,4 @@
-import { Company, Order, StockGroupEvent } from '.';
+import { Company, Order, StockEvent } from '.';
 import { PlanType } from './enum';
 
 export default interface Plan {
@@ -7,7 +7,7 @@ export default interface Plan {
   type: PlanType;
   company: Company;
   createdAt: string;
-  targetStockGroupEvent: StockGroupEvent[];
+  targetStockEvent: StockEvent[];
   orderStock: {
     order: Order;
   } | null;

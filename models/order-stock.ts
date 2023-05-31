@@ -1,5 +1,12 @@
-import { Location, OrderStockBase, Packaging, PaperCert, PaperColor, PaperColorGroup, PaperPattern, Product, Warehouse } from '.';
+import { Enum, Location } from '.';
 
-export default interface OrderStock extends OrderStockBase {
-  orderStock: OrderStockBase | null;
+export default interface OrderStock {
+  id: number;
+  orderId: number;
+  dstLocation: Location;
+  plan: {
+    id: number;
+    planNo: string;
+    type: Enum.PlanType;
+  }[];
 }
