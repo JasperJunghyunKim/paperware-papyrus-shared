@@ -8,7 +8,7 @@ export type DiscountRateUnit =
   | 'PERCENT';
 export type ShippingType = 'DELIVERY' | 'PICKUP' | 'STORE';
 export type StockEventStatus = 'NORMAL' | 'CANCELLED' | 'PENDING';
-export type TaskType = 'CONVERTING' | 'GUILLOTINE' | 'QUANTITY';
+export type TaskType = 'CONVERTING' | 'GUILLOTINE' | 'RELEASE';
 export type DiscountType = 'NONE' | 'MANUAL_NONE' | 'DEFAULT' | 'SPECIAL';
 export type BusinessRelationshipRequestStatus =
   | 'PENDING'
@@ -24,8 +24,11 @@ export type OrderStatus =
   | 'ACCEPTED'
   | 'ORDER_CANCELLED'
   | 'OFFER_CANCELLED';
-export type PlanStatus = 'PREPARING' | 'PROGRESSING' | 'PROGRESSED';
-export type TaskStatus = 'PREPARING' | 'PROGRESSING' | 'PROGRESSED';
+export type TaskStatus =
+  | 'PREPARING'
+  | 'PROGRESSING'
+  | 'PROGRESSED'
+  | 'CANCELLED';
 export type Method =
   | 'ACCOUNT_TRANSFER'
   | 'PROMISSORY_NOTE'
@@ -121,3 +124,4 @@ export type PlanType =
   | 'TRADE_WITHDRAW_BUYER'
   | 'TRADE_OUTSOURCE_PROCESS_SELLER'
   | 'TRADE_OUTSOURCE_PROCESS_BUYER';
+export type PlanStatus = 'PREPARING' | 'PROGRESSING' | 'CANCELLED';

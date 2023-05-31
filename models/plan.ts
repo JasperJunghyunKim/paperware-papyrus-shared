@@ -1,9 +1,10 @@
 import { Company, Order, StockEvent } from '.';
-import { PlanType } from './enum';
+import { PlanStatus, PlanType } from './enum';
 
 export default interface Plan {
   id: number;
   planNo: string;
+  status: PlanStatus;
   type: PlanType;
   company: Company;
   createdAt: string;
