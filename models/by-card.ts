@@ -46,6 +46,14 @@ export default interface ByCard {
    */
   cardId: number;
   /**
+   * 은행 식별자
+   */
+  bankAccountId: number;
+  /**
+   * 계좌 이름
+   */
+  accountName: string;
+  /**
    * 카드 이름
    */
   cardName: string;
