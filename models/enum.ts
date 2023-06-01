@@ -124,4 +124,8 @@ export type PlanType =
   | 'TRADE_WITHDRAW_BUYER'
   | 'TRADE_OUTSOURCE_PROCESS_SELLER'
   | 'TRADE_OUTSOURCE_PROCESS_BUYER';
-export type PlanStatus = 'PREPARING' | 'PROGRESSING' | 'CANCELLED';
+export type PlanStatus =
+  | 'PREPARING'
+  | 'PROGRESSING'
+  | 'PROGRESSED'
+  | 'CANCELLED';

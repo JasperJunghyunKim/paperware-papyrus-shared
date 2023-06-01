@@ -1,4 +1,9 @@
-import { DepositType, DiscountType, OfficialPriceType, PriceUnit } from '../../models/enum';
+import {
+  DepositType,
+  DiscountType,
+  OfficialPriceType,
+  PriceUnit,
+} from '../../models/enum';
 import { Api } from '../..';
 import { PaginationQuery } from '../../models/pagination';
 
@@ -16,7 +21,7 @@ export interface OrderStockCreateRequest {
   memo: string;
   wantedDate: string;
   warehouseId: number | null;
-  orderStockId: number | null;
+  planId: number | null;
   productId: number;
   packagingId: number;
   grammage: number;
@@ -33,21 +38,9 @@ export interface OrderStockUpdateRequest {
   locationId: number;
   memo: string;
   wantedDate: string;
-  warehouseId: number | null;
-  orderStockId: number | null;
-  productId: number;
-  packagingId: number;
-  grammage: number;
-  sizeX: number;
-  sizeY: number;
-  paperColorGroupId: number | null;
-  paperColorId: number | null;
-  paperPatternId: number | null;
-  paperCertId: number | null;
-  quantity: number;
 }
 
-export interface OrderStockArrivalListQuery extends PaginationQuery { }
+export interface OrderStockArrivalListQuery extends PaginationQuery {}
 
 export interface OrderStockArrivalCreateRequest {
   productId: number;
@@ -105,4 +98,27 @@ export interface OrderDepositCreateRequest {
   paperPatternId?: number | null;
   paperCertId?: number | null;
   quantity: number;
+}
+
+/** 원지 */
+export interface OrderStockAssignStockRequest {
+  warehouseId: number | null;
+  planId: number | null;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroupId?: number | null;
+  paperColorId?: number | null;
+  paperPatternId?: number | null;
+  paperCertId?: number | null;
+  quantity: number;
+  stockPrice: Api.StockCreateStockPriceRequest;
+}
+
+/** 주문 원지 수정 */
+export interface OrderStockAssignStockUpdateRequest
+  extends OrderStockAssignStockRequest {
+  orderId: number;
 }
