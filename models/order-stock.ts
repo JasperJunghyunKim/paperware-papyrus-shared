@@ -1,4 +1,5 @@
 import { Enum, Location } from '.';
+import { Model } from '..';
 
 export default interface OrderStock {
   id: number;
@@ -8,5 +9,6 @@ export default interface OrderStock {
     id: number;
     planNo: string;
     type: Enum.PlanType;
+    assignStockEvent: Model.StockEvent;
   }[];
 }
