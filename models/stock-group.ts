@@ -1,3 +1,4 @@
+import { Location } from ".";
 import Company from "./company";
 import Packaging from "./packaging";
 import PaperCert from "./paper-cert";
@@ -8,7 +9,9 @@ import Plan from "./plan";
 import Product from "./product";
 import Warehouse from "./warehouse";
 
-type WarehouseWithoutCompany = Omit<Warehouse, 'company'>
+type WarehouseWithoutCompany = Omit<Warehouse, 'company'>;
+type LocationWithoutCompany = Omit<Location, 'company'>;
+
 interface StockGroupPlan {
     id: number;
     planNo: string;
@@ -18,7 +21,8 @@ interface StockGroupPlan {
             orderNo: string;
             wantedDate: string;
             partnerCompany: Company;
-        }
+        };
+        dstLocation: LocationWithoutCompany;
     } | null;
 }
 
