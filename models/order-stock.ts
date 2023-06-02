@@ -10,5 +10,6 @@ export default interface OrderStock {
     planNo: string;
     type: Enum.PlanType;
     assignStockEvent: Model.StockEvent;
+    companyId: number;
   }[];
 }
