@@ -8,6 +8,7 @@ export default interface Plan {
   type: PlanType;
   company: Company;
   createdAt: string;
+  assignStockEvent: StockEvent | null;
   targetStockEvent: StockEvent[];
   orderStock: {
     order: Order;
