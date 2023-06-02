@@ -1,4 +1,4 @@
-import { StockPrice } from '.';
+import { Enum, StockPrice } from '.';
 import Company from './company';
 import Packaging from './packaging';
 import PaperCert from './paper-cert';
@@ -13,6 +13,7 @@ export default interface Stock {
   serial: string;
   company: Company;
   warehouse: Warehouse | null;
+  planId: number;
   product: Product;
   packaging: Packaging;
   grammage: number;
