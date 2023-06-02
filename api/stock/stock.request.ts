@@ -16,6 +16,7 @@ export interface StockListQuery {
   paperColorId?: number;
   paperPatternId?: number;
   paperCertId?: number;
+  planId?: number;
 }
 
 /** 재고 생성 (신규 등록) */
