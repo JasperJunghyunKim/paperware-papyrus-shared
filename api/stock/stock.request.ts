@@ -2,7 +2,9 @@ import { DiscountType, OfficialPriceType, PriceUnit } from '../../models/enum';
 import { PaginationQuery } from '../../models/pagination';
 
 /** 자사 재고그룹 목록 요청 */
-export type StockGroupListQuery = PaginationQuery;
+export interface StockGroupListQuery extends PaginationQuery {
+  planId?: 'any' | number;
+};
 
 /** 자사 재고목록 요청 */
 export interface StockListQuery {

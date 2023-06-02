@@ -40,4 +40,7 @@ export default interface StockGroup {
     plan: StockGroupPlan | null;
     totalQuantity: number;
     availableQuantity: number;
+    totalArrivalQuantity: number;
+    storingQuantity: number;
+    nonStoringQuantity: number;
 }
