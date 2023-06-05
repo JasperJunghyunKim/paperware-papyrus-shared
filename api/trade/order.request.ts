@@ -40,7 +40,7 @@ export interface OrderStockUpdateRequest {
   wantedDate: string;
 }
 
-export interface OrderStockArrivalListQuery extends PaginationQuery {}
+export interface OrderStockArrivalListQuery extends PaginationQuery { }
 
 export interface OrderStockArrivalCreateRequest {
   productId: number;
@@ -98,6 +98,12 @@ export interface OrderDepositCreateRequest {
   paperPatternId?: number | null;
   paperCertId?: number | null;
   quantity: number;
+}
+
+/** 보관량 목록  */
+export interface OrderDepositListQuery extends PaginationQuery {
+  type: DepositType;
+  companyRegistrationNumber?: string;
 }
 
 /** 원지 */

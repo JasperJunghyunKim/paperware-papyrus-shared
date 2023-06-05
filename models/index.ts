@@ -51,6 +51,7 @@ import InitialOrder from './initial-order';
 import BySecurity from './by-security';
 import CompanyPartner from './company-partner';
 import Security from './security';
+import Deposit from './deposit';
 
 export * as Enum from './enum';
 export type {
@@ -104,4 +105,5 @@ export type {
   TradePrice,
   User,
   Warehouse,
+  Deposit,
 };
