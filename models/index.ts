@@ -52,6 +52,7 @@ import BySecurity from './by-security';
 import CompanyPartner from './company-partner';
 import Security from './security';
 import Deposit from './deposit';
+import DepositEvent from './deposit-event';
 
 export * as Enum from './enum';
 export type {
@@ -106,4 +107,5 @@ export type {
   User,
   Warehouse,
   Deposit,
+  DepositEvent,
 };
