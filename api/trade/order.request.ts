@@ -98,12 +98,30 @@ export interface OrderDepositCreateRequest {
   paperPatternId?: number | null;
   paperCertId?: number | null;
   quantity: number;
+  memo?: string;
 }
 
 /** 보관량 목록  */
 export interface OrderDepositListQuery extends PaginationQuery {
   type: DepositType;
   companyRegistrationNumber?: string;
+}
+
+/** 보관량 증감 */
+export interface DepositCreateRequest {
+  srcCompanyId: number;
+  dstCompanyId: number;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroupId?: number | null;
+  paperColorId?: number | null;
+  paperPatternId?: number | null;
+  paperCertId?: number | null;
+  quantity: number;
+  memo: string;
 }
 
 /** 원지 */
@@ -124,4 +142,4 @@ export interface OrderStockAssignStockRequest {
 
 /** 주문 원지 수정 */
 export interface OrderStockAssignStockUpdateRequest
-  extends OrderStockAssignStockRequest {}
+  extends OrderStockAssignStockRequest { }
