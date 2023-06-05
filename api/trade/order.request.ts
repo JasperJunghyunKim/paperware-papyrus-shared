@@ -114,7 +114,6 @@ export interface OrderStockAssignStockRequest {
   paperPatternId?: number | null;
   paperCertId?: number | null;
   quantity: number;
-  stockPrice: Api.StockCreateStockPriceRequest;
 }
 
 /** 주문 원지 수정 */
