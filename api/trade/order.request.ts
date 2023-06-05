@@ -119,6 +119,4 @@ export interface OrderStockAssignStockRequest {
 
 /** 주문 원지 수정 */
 export interface OrderStockAssignStockUpdateRequest
-  extends OrderStockAssignStockRequest {
-  orderId: number;
-}
+  extends OrderStockAssignStockRequest {}
