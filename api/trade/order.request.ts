@@ -32,6 +32,7 @@ export interface OrderStockCreateRequest {
   paperPatternId: number | null;
   paperCertId: number | null;
   quantity: number;
+  stockPrice: Api.StockCreateStockPriceRequest;
 }
 
 export interface OrderStockUpdateRequest {
