@@ -76,12 +76,29 @@ export interface OrderStockTradePriceUpdateRequest {
   orderStockTradeAltBundle?: OrderStockTradeAltBundleUpdateRequest;
 }
 
+export interface OrderDepositTradeAltBundleUpdateRequest {
+  altSizeX: number;
+  altSizeY: number;
+  altQuantity: number;
+}
+
+export interface OrderDepositTradePriceUpdateRequest {
+  officialPriceType: OfficialPriceType;
+  officialPrice: number;
+  officialPriceUnit: PriceUnit;
+  discountType: DiscountType;
+  discountPrice: number;
+  unitPrice: number;
+  unitPriceUnit: PriceUnit;
+  processPrice: number;
+  orderStockTradeAltBundle?: OrderStockTradeAltBundleUpdateRequest;
+}
+
 export interface TradePriceUpdateRequest {
-  orderId: number;
-  companyId: number;
   suppliedPrice: number;
   vatPrice: number;
   orderStockTradePrice?: OrderStockTradePriceUpdateRequest;
+  orderDepositTradePrice?: OrderStockTradePriceUpdateRequest;
 }
 
 /** 보관 등록 */
