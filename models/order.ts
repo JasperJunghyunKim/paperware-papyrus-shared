@@ -1,4 +1,4 @@
-import { OrderStock } from '.';
+import { OrderDeposit, OrderStock } from '.';
 import Company from './company';
 import { OrderStatus, OrderType } from './enum';
 
@@ -15,4 +15,5 @@ export default interface Order {
   stockAcceptedCompanyId: number | null;
   isStockRejected: boolean;
   orderStock: OrderStock | null;
+  orderDeposit: OrderDeposit | null;
 }
