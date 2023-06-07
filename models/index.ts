@@ -53,6 +53,7 @@ import CompanyPartner from './company-partner';
 import Security from './security';
 import Deposit from './deposit';
 import DepositEvent from './deposit-event';
+import OrderDeposit from './order-deposit';
 
 export * as Enum from './enum';
 export type {
@@ -108,4 +109,5 @@ export type {
   Warehouse,
   Deposit,
   DepositEvent,
+  OrderDeposit,
 };

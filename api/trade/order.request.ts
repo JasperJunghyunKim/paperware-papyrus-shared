@@ -109,8 +109,8 @@ export interface OrderDepositListQuery extends PaginationQuery {
 
 /** 보관량 증감 */
 export interface DepositCreateRequest {
-  srcCompanyId: number;
-  dstCompanyId: number;
+  type: DepositType;
+  partnerCompanyRegistrationNumber: string;
   productId: number;
   packagingId: number;
   grammage: number;
