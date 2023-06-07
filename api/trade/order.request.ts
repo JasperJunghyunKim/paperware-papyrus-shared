@@ -143,3 +143,15 @@ export interface OrderStockAssignStockRequest {
 /** 주문 원지 수정 */
 export interface OrderStockAssignStockUpdateRequest
   extends OrderStockAssignStockRequest { }
+
+/** 보관매입/매출 등록 */
+export interface OrderDepositAssignDepositCreateRequest {
+  depositId: number;
+  quantity: number;
+}
+
+/** 주문매입/매출 수정 */
+export interface OrderDepositAssignDepositUpdateRequest {
+  depositId: number;
+  quantity: number;
+}
