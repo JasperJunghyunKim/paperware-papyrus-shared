@@ -3,5 +3,5 @@ import Partner from './partner';
 
 export default interface BusinessRelationshipCompact extends Company {
   flag: number;
-  partner: Partner;
+  partner: Partner | null;
 }
