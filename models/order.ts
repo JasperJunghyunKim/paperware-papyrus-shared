@@ -1,4 +1,4 @@
-import { OrderDeposit, OrderStock } from '.';
+import { DepositEvent, OrderDeposit, OrderStock } from '.';
 import Company from './company';
 import { OrderStatus, OrderType } from './enum';
 
@@ -16,4 +16,6 @@ export default interface Order {
   isStockRejected: boolean;
   orderStock: OrderStock | null;
   orderDeposit: OrderDeposit | null;
+  srcDepositEvent: DepositEvent | null;
+  dstDepositEvent: DepositEvent | null;
 }
