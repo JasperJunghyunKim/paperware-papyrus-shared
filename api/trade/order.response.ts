@@ -19,5 +19,5 @@ export type DepositHistoryResponse = DepositEvent[];
 
 /** 주문 보관 상세 */
 export type OrderDepositResponse = {
-    depositEvent: DepositEvent;
+    depositEvent: DepositEvent | null;
 };
