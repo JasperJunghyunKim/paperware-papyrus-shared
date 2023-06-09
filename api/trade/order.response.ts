@@ -18,4 +18,6 @@ export type DepositListResponse = PaginationResponse<Deposit>;
 export type DepositHistoryResponse = DepositEvent[];
 
 /** 주문 보관 상세 */
-export type OrderDepositResponse = DepositEvent | null;
+export type OrderDepositResponse = {
+    depositEvent: DepositEvent;
+};
