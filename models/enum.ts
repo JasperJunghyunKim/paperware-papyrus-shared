@@ -131,3 +131,8 @@ export type PlanStatus =
   | 'PROGRESSING'
   | 'PROGRESSED'
   | 'CANCELLED';
+export type InvoiceStatus =
+  | 'WAIT_LOADING'
+  | 'WAIT_SHIPPING'
+  | 'ON_SHIPPING'
+  | 'DONE_SHIPPING';

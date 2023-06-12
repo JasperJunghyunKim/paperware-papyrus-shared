@@ -1,4 +1,5 @@
 import {
+  Enum,
   Packaging,
   PaperCert,
   PaperColor,
@@ -12,6 +13,7 @@ import {
 export default interface Invoice {
   id: number;
   invoiceNo: string;
+  invoiceStatus: Enum.InvoiceStatus;
   shipping: Shipping | null;
   product: Product;
   packaging: Packaging;
