@@ -1,4 +1,4 @@
-import { Model } from 'src/@shared';
+import { Model } from "..";
 
 export interface Input {
   packagingType: Model.Enum.PackagingType;
@@ -13,7 +13,7 @@ export interface Data extends Input {
 export function applicate(
   input: Input,
   tasks: Model.Task[],
-  lastTaskId: number,
+  lastTaskId: number
 ): Data {
   const items: Model.Task[] = tasks
     .reduce(
@@ -24,7 +24,7 @@ export function applicate(
         }
         return acc;
       },
-      [tasks.find((p) => p.id === lastTaskId)],
+      [tasks.find((p) => p.id === lastTaskId)!]
     )
     .reverse();
 
@@ -44,20 +44,20 @@ export function applicate(
 
 function operate(input: Data, operator: Model.Task): Data {
   switch (operator.type) {
-    case 'CONVERTING':
+    case "CONVERTING":
       return operateConverting(
         input,
-        operator.taskConverting.sizeX,
-        operator.taskConverting.sizeY,
+        operator.taskConverting?.sizeX ?? 1,
+        operator.taskConverting?.sizeY ?? 1
       );
-    case 'GUILLOTINE':
+    case "GUILLOTINE":
       return operateGuillotine(
         input,
-        operator.taskGuillotine.sizeX,
-        operator.taskGuillotine.sizeY,
+        operator.taskGuillotine?.sizeX ?? 1,
+        operator.taskGuillotine?.sizeY ?? 1
       );
-    case 'RELEASE':
-      return operateQuantity(input, operator.taskQuantity.quantity);
+    case "RELEASE":
+      return operateQuantity(input, operator.taskQuantity?.quantity ?? 0);
     default:
       throw new Error(`Unknown task type: ${operator.type}`);
   }
@@ -65,7 +65,7 @@ function operate(input: Data, operator: Model.Task): Data {
 
 function operateConverting(input: Data, sizeX: number, sizeY: number): Data {
   return {
-    packagingType: 'SKID',
+    packagingType: "SKID",
     sizeX,
     sizeY,
     quantity: input.quantity,
@@ -74,7 +74,7 @@ function operateConverting(input: Data, sizeX: number, sizeY: number): Data {
 
 function operateGuillotine(input: Data, sizeX: number, sizeY: number): Data {
   return {
-    packagingType: 'SKID',
+    packagingType: "SKID",
     sizeX,
     sizeY,
     quantity: input.quantity,
