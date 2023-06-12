@@ -172,3 +172,35 @@ export interface OrderDepositAssignDepositUpdateRequest {
   depositId: number;
   quantity: number;
 }
+
+/** 외주공정 */
+export interface OrderCuttingCreateRequest {
+  srcCompanyId: number;
+  dstCompanyId: number;
+  srcLocationId: number;
+  dstLocationId: number;
+  memo: string;
+  srcWantedDate: string;
+  dstWantedDate: string;
+  // 부모재고 선택
+  warehouseId: number | null;
+  planId: number | null;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroupId: number | null;
+  paperColorId: number | null;
+  paperPatternId: number | null;
+  paperCertId: number | null;
+  quantity: number;
+}
+
+/** 기타거래 */
+export interface OrderEtcCreateRequest {
+  srcCompanyId: number;
+  dstCompanyId: number;
+  item: string;
+  memo: string;
+}
