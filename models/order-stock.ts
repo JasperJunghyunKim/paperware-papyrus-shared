@@ -5,6 +5,7 @@ export default interface OrderStock {
   id: number;
   orderId: number;
   dstLocation: Location;
+  wantedDate: string;
   plan: {
     id: number;
     planNo: string;

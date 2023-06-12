@@ -14,7 +14,7 @@ export type BusinessRelationshipRequestStatus =
   | 'PENDING'
   | 'ACCEPTED'
   | 'REJECTED';
-export type OrderType = 'NORMAL' | 'DEPOSIT' | 'OUTSOURCE_PROCESS';
+export type OrderType = 'NORMAL' | 'DEPOSIT' | 'OUTSOURCE_PROCESS' | 'ETC';
 
 export type OrderStatus =
   | 'ORDER_PREPARING'
