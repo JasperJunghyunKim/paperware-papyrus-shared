@@ -9,6 +9,7 @@ export default interface OrderStock {
     id: number;
     planNo: string;
     type: Enum.PlanType;
+    status: Enum.PlanStatus;
     assignStockEvent: Model.StockEvent;
     companyId: number;
   }[];
