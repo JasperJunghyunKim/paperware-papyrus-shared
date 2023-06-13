@@ -1,4 +1,4 @@
-import { Model } from "..";
+import { Model } from '..';
 
 export interface Input {
   packagingType: Model.Enum.PackagingType;
@@ -13,20 +13,16 @@ export interface Data extends Input {
 export function applicate(
   input: Input,
   tasks: Model.Task[],
-  lastTaskId: number
+  lastTaskId: number,
 ): Data {
-  const items: Model.Task[] = tasks
-    .reduce(
-      (acc: Model.Task[], task: Model.Task) => {
-        const parentTask = tasks.find((p) => p.id === task.parentTaskId);
-        if (parentTask) {
-          acc.push(parentTask);
-        }
-        return acc;
-      },
-      [tasks.find((p) => p.id === lastTaskId)!]
-    )
-    .reverse();
+  const last = tasks.find((p) => p.id === lastTaskId);
+  const items: Model.Task[] = [];
+  let current = last;
+  while (current) {
+    items.push(current);
+    current = tasks.find((p) => p.id === current.parentTaskId);
+  }
+  items.reverse();
 
   let data: Data = {
     packagingType: input.packagingType,
@@ -44,19 +40,19 @@ export function applicate(
 
 function operate(input: Data, operator: Model.Task): Data {
   switch (operator.type) {
-    case "CONVERTING":
+    case 'CONVERTING':
       return operateConverting(
         input,
         operator.taskConverting?.sizeX ?? 1,
-        operator.taskConverting?.sizeY ?? 1
+        operator.taskConverting?.sizeY ?? 1,
       );
-    case "GUILLOTINE":
+    case 'GUILLOTINE':
       return operateGuillotine(
         input,
         operator.taskGuillotine?.sizeX ?? 1,
-        operator.taskGuillotine?.sizeY ?? 1
+        operator.taskGuillotine?.sizeY ?? 1,
       );
-    case "RELEASE":
+    case 'RELEASE':
       return operateQuantity(input, operator.taskQuantity?.quantity ?? 0);
     default:
       throw new Error(`Unknown task type: ${operator.type}`);
@@ -65,7 +61,7 @@ function operate(input: Data, operator: Model.Task): Data {
 
 function operateConverting(input: Data, sizeX: number, sizeY: number): Data {
   return {
-    packagingType: "SKID",
+    packagingType: 'SKID',
     sizeX,
     sizeY,
     quantity: input.quantity,
@@ -74,7 +70,7 @@ function operateConverting(input: Data, sizeX: number, sizeY: number): Data {
 
 function operateGuillotine(input: Data, sizeX: number, sizeY: number): Data {
   return {
-    packagingType: "SKID",
+    packagingType: 'SKID',
     sizeX,
     sizeY,
     quantity: input.quantity,
