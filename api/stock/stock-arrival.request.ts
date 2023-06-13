@@ -1,5 +1,5 @@
-import { DiscountType, OfficialPriceType, PriceUnit } from '@prisma/client';
-import { PaginationQuery } from '../../models/pagination';
+import { DiscountType, OfficialPriceType, PriceUnit } from "../../models/enum";
+import { PaginationQuery } from "../../models/pagination";
 
 export type StockArrivalListQuery = PaginationQuery;
 
