@@ -47,6 +47,20 @@ export interface StockCreateRequest {
   stockPrice: StockCreateStockPriceRequest;
 }
 
+export interface ArrivalStockCreateRequest {
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY?: number;
+  paperColorGroupId?: number | null;
+  paperColorId?: number | null;
+  paperPatternId?: number | null;
+  paperCertId?: number | null;
+  quantity: number;
+  stockPrice: StockCreateStockPriceRequest;
+}
+
 /** 거래처 재고그룹 목록 조회 */
 export type PartnerStockGroupListQuery = PaginationQuery & {
   companyId?: number;
@@ -65,4 +79,9 @@ export interface StockGroupQuantityQuery {
   paperColorId?: number | null;
   paperPatternId?: number | null;
   paperCertId?: number | null;
+}
+
+/** 재고 증감 */
+export interface StockQuantityChangeRequest {
+  quantity: number;
 }

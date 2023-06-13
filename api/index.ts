@@ -55,3 +55,5 @@ export * from './inhouse/bank-account.response';
 
 export * from './inhouse/security.request';
 export * from './inhouse/security.response';
+
+export * from './inhouse/inhouse-process-request';

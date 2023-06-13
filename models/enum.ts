@@ -14,7 +14,7 @@ export type BusinessRelationshipRequestStatus =
   | 'PENDING'
   | 'ACCEPTED'
   | 'REJECTED';
-export type OrderType = 'NORMAL' | 'DEPOSIT';
+export type OrderType = 'NORMAL' | 'DEPOSIT' | 'OUTSOURCE_PROCESS' | 'ETC';
 
 export type OrderStatus =
   | 'ORDER_PREPARING'
@@ -120,6 +120,7 @@ export type PlanType =
   | 'INHOUSE_MODIFY'
   | 'INHOUSE_RELOCATION'
   | 'INHOUSE_PROCESS'
+  | 'INHOUSE_STOCK_QUANTITY_CHANGE'
   | 'TRADE_NORMAL_SELLER'
   | 'TRADE_NORMAL_BUYER'
   | 'TRADE_WITHDRAW_SELLER'
