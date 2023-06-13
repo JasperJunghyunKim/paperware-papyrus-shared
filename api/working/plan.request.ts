@@ -1,6 +1,10 @@
 import { PaginationQuery } from '../../models/pagination';
 
-export type PlanListQuery = PaginationQuery;
+export type PlanListQueryType = 'INHOUSE' | 'DEFAULT';
+
+export interface PlanListQuery extends PaginationQuery {
+  type?: PlanListQueryType;
+}
 
 export interface PlanCreateRequest {
   productId: number;
