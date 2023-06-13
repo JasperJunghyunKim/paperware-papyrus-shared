@@ -66,10 +66,10 @@ export type PartnerStockGroupListQuery = PaginationQuery & {
   companyId?: number;
 };
 
-/** 재고 그룹 상세 조회 */
+/** 재고 그룹 수량 조회 */
 export interface StockGroupQuantityQuery {
   warehouseId: number | null;
-  initialOrderId: number | null;
+  planId: number | null;
   productId: number;
   packagingId: number;
   grammage: number;

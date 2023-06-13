@@ -16,10 +16,10 @@ interface StockGroupPlan {
     id: number;
     planNo: string;
     orderStock: {
+        wantedDate: string;
         order: {
             id: number;
             orderNo: string;
-            wantedDate: string;
             partnerCompany: Company;
         };
         dstLocation: LocationWithoutCompany;
