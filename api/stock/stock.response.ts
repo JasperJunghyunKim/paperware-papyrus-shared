@@ -15,3 +15,6 @@ export type StockDetailResponse = Stock;
 export type PartnerStockGroupListResponse = PaginationResponse<StockGroup>;
 
 export type StockGroupQuantityResponse = Model.StockQuantity;
+
+/** 재고그룹 상세 조회 */
+export type StockGroupDetailResponse = StockGroup;
