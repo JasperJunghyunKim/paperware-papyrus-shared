@@ -54,6 +54,7 @@ import Security from './security';
 import Deposit from './deposit';
 import DepositEvent from './deposit-event';
 import OrderDeposit from './order-deposit';
+import ArrivalStock from './arrival-stock';
 
 export * as Enum from './enum';
 export type {
@@ -110,4 +111,5 @@ export type {
   Deposit,
   DepositEvent,
   OrderDeposit,
+  ArrivalStock,
 };
