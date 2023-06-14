@@ -55,6 +55,7 @@ import Deposit from './deposit';
 import DepositEvent from './deposit-event';
 import OrderDeposit from './order-deposit';
 import ArrivalStock from './arrival-stock';
+import DiscountRateCondition from './discount-rate-condition';
 
 export * as Enum from './enum';
 export type {
@@ -112,4 +113,5 @@ export type {
   DepositEvent,
   OrderDeposit,
   ArrivalStock,
+  DiscountRateCondition,
 };
