@@ -59,6 +59,8 @@ export interface ArrivalStockCreateRequest {
   paperCertId?: number | null;
   quantity: number;
   stockPrice: StockCreateStockPriceRequest;
+  dstLocationId: number;
+  wantedDate: string;
 }
 
 /** 거래처 재고그룹 목록 조회 */

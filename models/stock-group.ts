@@ -13,34 +13,38 @@ type WarehouseWithoutCompany = Omit<Warehouse, 'company'>;
 type LocationWithoutCompany = Omit<Location, 'company'>;
 
 interface StockGroupPlan {
-    id: number;
-    planNo: string;
-    orderStock: {
-        wantedDate: string;
-        order: {
-            id: number;
-            orderNo: string;
-            partnerCompany: Company;
-        };
-        dstLocation: LocationWithoutCompany;
-    } | null;
+  id: number;
+  planNo: string;
+  orderStock: {
+    wantedDate: string;
+    order: {
+      id: number;
+      orderNo: string;
+      partnerCompany: Company;
+    };
+    dstLocation: LocationWithoutCompany;
+  } | null;
+  planShipping: {
+    wantedDate: string;
+    dstLocation: LocationWithoutCompany;
+  } | null;
 }
 
 export default interface StockGroup {
-    warehouse: WarehouseWithoutCompany | null;
-    product: Product;
-    packaging: Packaging;
-    grammage: number;
-    sizeX: number;
-    sizeY: number;
-    paperColorGroup: PaperColorGroup | null;
-    paperColor: PaperColor | null;
-    paperPattern: PaperPattern | null;
-    paperCert: PaperCert | null;
-    plan: StockGroupPlan | null;
-    totalQuantity: number;
-    availableQuantity: number;
-    totalArrivalQuantity: number;
-    storingQuantity: number;
-    nonStoringQuantity: number;
+  warehouse: WarehouseWithoutCompany | null;
+  product: Product;
+  packaging: Packaging;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroup: PaperColorGroup | null;
+  paperColor: PaperColor | null;
+  paperPattern: PaperPattern | null;
+  paperCert: PaperCert | null;
+  plan: StockGroupPlan | null;
+  totalQuantity: number;
+  availableQuantity: number;
+  totalArrivalQuantity: number;
+  storingQuantity: number;
+  nonStoringQuantity: number;
 }
