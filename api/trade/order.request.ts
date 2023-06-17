@@ -173,8 +173,8 @@ export interface OrderDepositAssignDepositUpdateRequest {
   quantity: number;
 }
 
-/** 외주공정 */
-export interface OrderCuttingCreateRequest {
+/** 외주공정 등록 */
+export interface OrderProcessCreateRequest {
   srcCompanyId: number;
   dstCompanyId: number;
   srcLocationId: number;
