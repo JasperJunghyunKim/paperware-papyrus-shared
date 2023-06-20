@@ -54,6 +54,8 @@ import Security from './security';
 import Deposit from './deposit';
 import DepositEvent from './deposit-event';
 import OrderDeposit from './order-deposit';
+import OrderProcess from './order-process';
+import OrderEtc from './order-etc';
 import ArrivalStock from './arrival-stock';
 import DiscountRateCondition from './discount-rate-condition';
 
@@ -112,6 +114,8 @@ export type {
   Deposit,
   DepositEvent,
   OrderDeposit,
+  OrderProcess,
+  OrderEtc,
   ArrivalStock,
   DiscountRateCondition,
 };
