@@ -197,10 +197,41 @@ export interface OrderProcessCreateRequest {
   quantity: number;
 }
 
+/** 외주공정 정보 업데이트 */
+export interface OrderProcessInfoUpdateRequest {
+  srcLocationId: number;
+  dstLocationId: number;
+  memo: string;
+  srcWantedDate: string;
+  dstWantedDate: string;
+}
+
+/** 외주공정 재고 수정 */
+export interface OrderProcessStockUpdateRequest {
+  warehouseId: number | null;
+  planId: number | null;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroupId: number | null;
+  paperColorId: number | null;
+  paperPatternId: number | null;
+  paperCertId: number | null;
+  quantity: number;
+}
+
 /** 기타거래 */
 export interface OrderEtcCreateRequest {
   srcCompanyId: number;
   dstCompanyId: number;
+  item: string;
+  memo: string;
+}
+
+/** 기타거래 수정 */
+export interface OrderEtcUpdateRequest {
   item: string;
   memo: string;
 }
