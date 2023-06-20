@@ -28,6 +28,5 @@ export default interface OrderProcess {
     srcWantedDate: string;
     dstWantedDate: string;
     order: Order;
-    srcPlan: Plan[];
-    dstPlan: Plan[];
+    plan: Plan[];
 }
