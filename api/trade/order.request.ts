@@ -109,6 +109,7 @@ export interface TradePriceUpdateRequest {
 export interface OrderDepositCreateRequest {
   srcCompanyId: number;
   dstCompanyId: number;
+  orderDate: string;
   productId: number;
   packagingId: number;
   grammage: number;
@@ -236,12 +237,14 @@ export interface OrderProcessStockUpdateRequest {
 export interface OrderEtcCreateRequest {
   srcCompanyId: number;
   dstCompanyId: number;
+  orderDate: string;
   item: string;
   memo: string;
 }
 
 /** 기타거래 수정 */
 export interface OrderEtcUpdateRequest {
+  orderDate: string;
   item: string;
   memo: string;
 }
