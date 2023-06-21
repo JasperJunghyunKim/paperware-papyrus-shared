@@ -24,7 +24,8 @@ export default interface OrderProcess {
     id: number;
     srcLocation: Location;
     dstLocation: Location;
-    isDirectShipping: Boolean;
+    isSrcDirectShipping: Boolean;
+    isDstDirectShipping: Boolean;
     srcWantedDate: string;
     dstWantedDate: string;
     order: Order;
