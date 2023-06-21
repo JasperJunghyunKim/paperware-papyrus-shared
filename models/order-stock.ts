@@ -6,6 +6,7 @@ export default interface OrderStock {
   orderId: number;
   dstLocation: Location;
   wantedDate: string;
+  isDirectShipping: boolean;
   plan: {
     id: number;
     planNo: string;

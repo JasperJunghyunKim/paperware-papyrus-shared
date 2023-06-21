@@ -8,6 +8,7 @@ export default interface Order {
   srcCompany: Company;
   dstCompany: Company;
   orderType: OrderType;
+  orderDate: string;
   status: OrderStatus;
   isEntrusted: boolean;
   memo: string;
