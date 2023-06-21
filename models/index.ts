@@ -38,6 +38,8 @@ import OfficialPrice from './official-price';
 import OfficialPriceCondition from './official-price-condition';
 import OrderStockTradeAltBundle from './order-stock-trade-alt-bundle';
 import OrderStockTradePrice from './order-stock-trade-price';
+import OrderDepositTradePrice from './order-deposit-trade-price';
+import OrderDepositTradeAltBundle from './order-deposit-trade-alt-bundle ';
 import Partner from './partner';
 import TradePrice from './trade-price';
 
@@ -118,4 +120,6 @@ export type {
   OrderEtc,
   ArrivalStock,
   DiscountRateCondition,
+  OrderDepositTradePrice,
+  OrderDepositTradeAltBundle,
 };

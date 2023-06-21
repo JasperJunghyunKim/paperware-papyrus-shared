@@ -1,3 +1,4 @@
+import OrderDepositTradePrice from "./order-deposit-trade-price";
 import OrderStockTradePrice from "./order-stock-trade-price";
 
 export default interface TradePrice {
@@ -7,4 +8,5 @@ export default interface TradePrice {
     vatPrice: number;
     isBookClosed: boolean;
     orderStockTradePrice: OrderStockTradePrice | null;
+    orderDepositTradePrice: OrderDepositTradePrice | null;
 }
