@@ -32,12 +32,16 @@ export interface OrderStockCreateRequest {
   paperPatternId: number | null;
   paperCertId: number | null;
   quantity: number;
+  orderDate: string;
+  isDirectShipping?: boolean;
 }
 
 export interface OrderStockUpdateRequest {
   locationId: number;
   memo: string;
   wantedDate: string;
+  orderDate: string;
+  isDirectShipping?: boolean;
 }
 
 export interface OrderStockArrivalListQuery extends PaginationQuery { }
@@ -195,6 +199,9 @@ export interface OrderProcessCreateRequest {
   paperPatternId: number | null;
   paperCertId: number | null;
   quantity: number;
+  orderDate: string;
+  isSrcDirectShipping?: boolean;
+  isDstDirectShipping?: boolean;
 }
 
 /** 외주공정 정보 업데이트 */
@@ -204,6 +211,9 @@ export interface OrderProcessInfoUpdateRequest {
   memo: string;
   srcWantedDate: string;
   dstWantedDate: string;
+  orderDate: string;
+  isSrcDirectShipping?: boolean;
+  isDstDirectShipping?: boolean;
 }
 
 /** 외주공정 재고 수정 */
