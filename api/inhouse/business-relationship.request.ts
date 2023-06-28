@@ -30,7 +30,7 @@ export interface RegisterPartnerRequest {
 }
 
 export interface BusinessRelationshipRequestRequest {
-  companyRegistrationNumber: string;
+  targetCompanyId: number;
   type: 'PURCHASE' | 'SALES' | 'BOTH' | 'NONE';
 }
 
