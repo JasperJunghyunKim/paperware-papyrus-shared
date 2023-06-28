@@ -30,13 +30,11 @@ export interface RegisterPartnerRequest {
 }
 
 export interface BusinessRelationshipRequestRequest {
-  companyId: number;
   companyRegistrationNumber: string;
   type: 'PURCHASE' | 'SALES' | 'BOTH' | 'NONE';
 }
 
 export interface UpsertPartnerRequest {
-  companyId: number;
   companyRegistrationNumber: string;
   partnerNickname: string;
   memo: string;
