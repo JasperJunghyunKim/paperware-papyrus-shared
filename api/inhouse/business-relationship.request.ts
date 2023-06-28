@@ -28,3 +28,16 @@ export interface RegisterPartnerRequest {
   email: string;
   memo: string;
 }
+
+export interface BusinessRelationshipRequestRequest {
+  companyId: number;
+  companyRegistrationNumber: string;
+  type: 'PURCHASE' | 'SALES' | 'BOTH' | 'NONE';
+}
+
+export interface UpsertPartnerRequest {
+  companyId: number;
+  companyRegistrationNumber: string;
+  partnerNickname: string;
+  memo: string;
+}
