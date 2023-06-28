@@ -1,5 +1,6 @@
-import { Enum, StockPrice } from '.';
+import { Enum, Plan, StockPrice } from '.';
 import Company from './company';
+import { PlanType } from './enum';
 import Packaging from './packaging';
 import PaperCert from './paper-cert';
 import PaperColor from './paper-color';
@@ -27,4 +28,7 @@ export default interface Stock {
   cachedQuantityAvailable: number;
   isSyncPrice: boolean;
   stockPrice: StockPrice;
+  initialPlan: {
+    type: PlanType;
+  }
 }
