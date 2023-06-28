@@ -10,6 +10,20 @@ export interface StockGroupListQuery extends PaginationQuery {
 
 };
 
+/** 자사 재고그룹 히스토리 요청 */
+export interface StockGroupHistoryQuery extends PaginationQuery {
+  warehouseId?: number;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY?: number;
+  paperColorGroupId?: number;
+  paperColorId?: number;
+  paperPatternId?: number;
+  paperCertId?: number;
+}
+
 /** 자사 재고목록 요청 */
 export interface StockListQuery {
   warehouseId?: number;

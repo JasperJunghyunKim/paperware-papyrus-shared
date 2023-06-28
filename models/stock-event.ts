@@ -6,4 +6,5 @@ export default interface StockEvent {
   stock: Stock;
   change: number;
   status: StockEventStatus;
+  createdAt: string;
 }
