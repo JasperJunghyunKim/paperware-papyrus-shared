@@ -4,6 +4,10 @@ import { PaginationQuery } from '../../models/pagination';
 /** 자사 재고그룹 목록 요청 */
 export interface StockGroupListQuery extends PaginationQuery {
   planId?: 'any' | number;
+  isDirectShippingIncluded?: 'true' | 'false';
+
+  /// 검색 필드
+
 };
 
 /** 자사 재고목록 요청 */
