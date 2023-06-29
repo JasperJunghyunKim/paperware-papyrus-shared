@@ -10,12 +10,7 @@ export type StockGroupListResponse = PaginationResponse<StockGroup>;
 export type StockGroupHistoryResponse = {
   stockInfo: Stock;
   stocks: Stock[];
-  stockEvents: {
-    id: number;
-    change: number;
-    status: StockEventStatus;
-    createdAt: string;
-  }[];
+  stockEvents: PaginationResponse<StockEvent & { remainingQuantity: number }>;
 };
 
 /** 자사 자식재고 목록 조회 */
