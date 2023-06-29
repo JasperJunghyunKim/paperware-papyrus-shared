@@ -7,8 +7,7 @@ export interface StockGroupListQuery extends PaginationQuery {
   isDirectShippingIncluded?: 'true' | 'false';
 
   /// 검색 필드
-
-};
+}
 
 /** 자사 재고그룹 히스토리 요청 */
 export interface StockGroupHistoryQuery extends PaginationQuery {

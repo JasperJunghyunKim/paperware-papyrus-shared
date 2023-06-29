@@ -30,5 +30,5 @@ export default interface Stock {
   stockPrice: StockPrice;
   initialPlan: {
     type: PlanType;
-  }
+  };
 }

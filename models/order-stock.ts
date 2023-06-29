@@ -1,4 +1,15 @@
-import { Company, Enum, Location, Packaging, PaperCert, PaperColor, PaperColorGroup, PaperPattern, Product, Warehouse } from '.';
+import {
+  Company,
+  Enum,
+  Location,
+  Packaging,
+  PaperCert,
+  PaperColor,
+  PaperColorGroup,
+  PaperPattern,
+  Product,
+  Warehouse,
+} from '.';
 import { Model } from '..';
 
 export default interface OrderStock {

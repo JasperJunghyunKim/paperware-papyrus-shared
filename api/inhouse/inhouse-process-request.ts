@@ -1,4 +1,3 @@
-
 /** 내부공정 등록 */
 export type InhouseProcessCreateRequest = {
   warehouseId: number | null;
@@ -13,4 +12,4 @@ export type InhouseProcessCreateRequest = {
   paperPatternId: number | null;
   paperCertId: number | null;
   quantity: number;
-}
+};

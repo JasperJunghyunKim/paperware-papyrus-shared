@@ -44,7 +44,7 @@ export interface OrderStockUpdateRequest {
   isDirectShipping?: boolean;
 }
 
-export interface OrderStockArrivalListQuery extends PaginationQuery { }
+export type OrderStockArrivalListQuery = PaginationQuery;
 
 export interface OrderStockArrivalCreateRequest {
   productId: number;
@@ -163,8 +163,7 @@ export interface OrderStockAssignStockRequest {
 }
 
 /** 주문 원지 수정 */
-export interface OrderStockAssignStockUpdateRequest
-  extends OrderStockAssignStockRequest { }
+export type OrderStockAssignStockUpdateRequest = OrderStockAssignStockRequest;
 
 /** 보관매입/매출 등록 */
 export interface OrderDepositAssignDepositCreateRequest {

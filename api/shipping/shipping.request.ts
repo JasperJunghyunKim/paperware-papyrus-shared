@@ -1,6 +1,6 @@
 import { PaginationQuery } from '../../models/pagination';
 
-export interface ShippingListQuery extends PaginationQuery {}
+export type ShippingListQuery = PaginationQuery;
 
 export interface ShippingCreateRequest {}
 

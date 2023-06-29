@@ -1,4 +1,4 @@
-import { AccountedType, Method, Subject } from "./enum";
+import { AccountedType, Method, Subject } from './enum';
 
 export default interface ByEtc {
   /**
@@ -14,12 +14,12 @@ export default interface ByEtc {
    */
   partnerNickName: string;
   /**
-  * 식별자
-  */
+   * 식별자
+   */
   accountedId: number;
   /**
- * 회계 유형
- */
+   * 회계 유형
+   */
   accountedType: AccountedType;
   /**
    * to date

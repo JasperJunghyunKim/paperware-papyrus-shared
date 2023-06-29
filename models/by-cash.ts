@@ -1,4 +1,4 @@
-import { AccountedType, Method, Subject } from "./enum";
+import { AccountedType, Method, Subject } from './enum';
 export default interface ByCash {
   /**
    * 기업 식별자

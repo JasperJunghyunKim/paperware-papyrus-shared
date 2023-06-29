@@ -1,4 +1,4 @@
-import { AccountedType, CardCompany, Method, Subject } from "./enum";
+import { AccountedType, CardCompany, Method, Subject } from './enum';
 
 export default interface ByCard {
   /**

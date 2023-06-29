@@ -10,7 +10,7 @@ export interface BusinessRelationshipCreateRequest {
   dstCompanyId: number;
 }
 
-export interface BusinessRelationshipCompactListQuery extends PaginationQuery {}
+export type BusinessRelationshipCompactListQuery = PaginationQuery;
 
 export interface SearchPartnerRequest {
   companyRegistrationNumber: string;

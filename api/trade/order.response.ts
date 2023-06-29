@@ -1,5 +1,13 @@
 import { PaginationResponse } from '../../models/pagination';
-import { Deposit, DepositEvent, Order, OrderEtc, OrderProcess, StockGroup, TradePrice } from '../../models';
+import {
+  Deposit,
+  DepositEvent,
+  Order,
+  OrderEtc,
+  OrderProcess,
+  StockGroup,
+  TradePrice,
+} from '../../models';
 
 export type OrderListResponse = PaginationResponse<Order>;
 export type OrderItemResponse = Order;
@@ -19,7 +27,7 @@ export type DepositHistoryResponse = DepositEvent[];
 
 /** 주문 보관 상세 */
 export type OrderDepositResponse = {
-    depositEvent: DepositEvent | null;
+  depositEvent: DepositEvent | null;
 };
 
 /** 외주공정 상세 */

@@ -1,13 +1,13 @@
-import { Location } from ".";
-import Company from "./company";
-import Packaging from "./packaging";
-import PaperCert from "./paper-cert";
-import PaperColor from "./paper-color";
-import PaperColorGroup from "./paper-color-group";
-import PaperPattern from "./paper-pattern";
-import Plan from "./plan";
-import Product from "./product";
-import Warehouse from "./warehouse";
+import { Location } from '.';
+import Company from './company';
+import Packaging from './packaging';
+import PaperCert from './paper-cert';
+import PaperColor from './paper-color';
+import PaperColorGroup from './paper-color-group';
+import PaperPattern from './paper-pattern';
+import Plan from './plan';
+import Product from './product';
+import Warehouse from './warehouse';
 
 type WarehouseWithoutCompany = Omit<Warehouse, 'company'>;
 type LocationWithoutCompany = Omit<Location, 'company'>;

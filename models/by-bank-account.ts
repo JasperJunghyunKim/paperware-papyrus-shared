@@ -1,4 +1,4 @@
-import { AccountedType, Bank, Method, Subject } from "./enum";
+import { AccountedType, Bank, Method, Subject } from './enum';
 
 export default interface ByBankAccount {
   /**

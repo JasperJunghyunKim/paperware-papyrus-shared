@@ -1,4 +1,4 @@
-import { Bank, DrawedStatus, SecurityStatus, SecurityType } from "./enum";
+import { Bank, DrawedStatus, SecurityStatus, SecurityType } from './enum';
 
 /**
  * 유가증권

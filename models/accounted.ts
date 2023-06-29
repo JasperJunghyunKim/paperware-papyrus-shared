@@ -1,4 +1,4 @@
-import { AccountedType, Method, SecurityStatus, Subject } from "./enum";
+import { AccountedType, Method, SecurityStatus, Subject } from './enum';
 
 export default interface Accounted {
   /**

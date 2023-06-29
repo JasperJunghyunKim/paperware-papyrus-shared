@@ -1,5 +1,5 @@
-import { AccountedType, EndorsementType, Method, Subject } from "./enum";
-import Security from "./security";
+import { AccountedType, EndorsementType, Method, Subject } from './enum';
+import Security from './security';
 
 export default interface BySecurity {
   /**

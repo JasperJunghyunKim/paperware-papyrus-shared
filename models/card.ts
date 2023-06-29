@@ -1,4 +1,4 @@
-import { CardCompany } from "./enum";
+import { CardCompany } from './enum';
 
 export default interface Card {
   /**

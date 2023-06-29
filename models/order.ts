@@ -1,4 +1,10 @@
-import { DepositEvent, OrderDeposit, OrderEtc, OrderProcess, OrderStock } from '.';
+import {
+  DepositEvent,
+  OrderDeposit,
+  OrderEtc,
+  OrderProcess,
+  OrderStock,
+} from '.';
 import Company from './company';
 import { OrderStatus, OrderType } from './enum';
 

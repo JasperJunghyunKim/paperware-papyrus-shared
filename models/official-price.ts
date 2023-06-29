@@ -1,4 +1,4 @@
-import { PriceUnit } from "./enum";
+import { PriceUnit } from './enum';
 
 export default interface OfficialPrice {
   officialPrice: number;

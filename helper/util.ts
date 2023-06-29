@@ -1,5 +1,5 @@
 export function formatString(pattern: string, ...values: any[]): string {
-  if (values.length === 0 || values.every(value => value === undefined)) {
+  if (values.length === 0 || values.every((value) => value === undefined)) {
     return pattern;
   }
   return values.reduce(
@@ -51,9 +51,19 @@ export function inc<T extends string>(value: T, ...array: T[]): boolean {
   return array.includes(value);
 }
 
-export function isValidDateRange(fromDate?: Date | null | string, toDate?: Date | null | string): boolean {
+export function isValidDateRange(
+  fromDate?: Date | null | string,
+  toDate?: Date | null | string,
+): boolean {
   // fromDate와 toDate가 정의되었는지 확인
-  if (fromDate === null || toDate === null || fromDate === undefined || toDate === undefined || typeof 'string' === fromDate || typeof 'string' === toDate) {
+  if (
+    fromDate === null ||
+    toDate === null ||
+    fromDate === undefined ||
+    toDate === undefined ||
+    typeof 'string' === fromDate ||
+    typeof 'string' === toDate
+  ) {
     return false;
   }
 

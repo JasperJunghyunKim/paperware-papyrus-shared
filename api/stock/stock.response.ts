@@ -1,9 +1,22 @@
+import { StockEventStatus } from '@prisma/client';
 import { Model } from '../..';
-import { Stock, StockGroup } from '../../models';
+import { Stock, StockEvent, StockGroup } from '../../models';
 import { PaginationResponse } from '../../models/pagination';
 
 /** 재고그룹 목록 조회 */
 export type StockGroupListResponse = PaginationResponse<StockGroup>;
+
+/** 재고그룹 히스토리 조회 */
+export type StockGroupHistoryResponse = {
+  stockInfo: Stock;
+  stocks: Stock[];
+  stockEvents: {
+    id: number;
+    change: number;
+    status: StockEventStatus;
+    createdAt: string;
+  }[];
+};
 
 /** 자사 자식재고 목록 조회 */
 export type StockListResponse = PaginationResponse<Stock>;

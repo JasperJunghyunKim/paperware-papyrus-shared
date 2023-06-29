@@ -1,7 +1,22 @@
-import DiscountRateCondition from "../../models/discount-rate-condition";
-import { Manufacturer, PaperCert, PaperColor, PaperColorGroup, PaperDomain, PaperGroup, PaperPattern, PaperType, Partner } from "../../models";
-import { PaginationResponse } from "../../models/pagination";
-import { DiscountRateMapType, DiscountRateUnit, PackagingType, PriceUnit } from "../../models/enum";
+import DiscountRateCondition from '../../models/discount-rate-condition';
+import {
+  Manufacturer,
+  PaperCert,
+  PaperColor,
+  PaperColorGroup,
+  PaperDomain,
+  PaperGroup,
+  PaperPattern,
+  PaperType,
+  Partner,
+} from '../../models';
+import { PaginationResponse } from '../../models/pagination';
+import {
+  DiscountRateMapType,
+  DiscountRateUnit,
+  PackagingType,
+  PriceUnit,
+} from '../../models/enum';
 
 /** 할인율 거래처 목록 */
 export interface DiscountRatePartner {
@@ -9,10 +24,12 @@ export interface DiscountRatePartner {
   discountRatecount: number;
 }
 
-export type DisocuntRatePartnerListResponse = PaginationResponse<DiscountRatePartner>;
+export type DisocuntRatePartnerListResponse =
+  PaginationResponse<DiscountRatePartner>;
 
 /** 할인율 목록 */
-export type DiscountRateListResponse = PaginationResponse<DiscountRateCondition>;
+export type DiscountRateListResponse =
+  PaginationResponse<DiscountRateCondition>;
 
 /** 할인율 상세 */
 export type DiscountRateResponse = DiscountRateCondition;

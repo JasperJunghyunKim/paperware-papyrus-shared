@@ -1,6 +1,6 @@
-import { DiscountType, OfficialPriceType, PriceUnit } from "../../models/enum";
-import { PaginationQuery } from "../../models/pagination";
-import { StockPrice } from "../../models";
+import { DiscountType, OfficialPriceType, PriceUnit } from '../../models/enum';
+import { PaginationQuery } from '../../models/pagination';
+import { StockPrice } from '../../models';
 
 export type StockArrivalListQuery = PaginationQuery;
 
