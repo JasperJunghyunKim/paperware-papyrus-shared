@@ -1,5 +1,6 @@
 import { Location } from '.';
 import Company from './company';
+import { OrderType, PlanType } from './enum';
 import Packaging from './packaging';
 import PaperCert from './paper-cert';
 import PaperColor from './paper-color';
@@ -12,17 +13,28 @@ import Warehouse from './warehouse';
 type WarehouseWithoutCompany = Omit<Warehouse, 'company'>;
 type LocationWithoutCompany = Omit<Location, 'company'>;
 
+interface StockGroupOrder {
+  id: number;
+  orderNo: string;
+  orderType: OrderType;
+  partnerCompany: Company;
+}
+
 interface StockGroupPlan {
   id: number;
   planNo: string;
+  planType: PlanType;
   orderStock: {
     wantedDate: string;
-    order: {
-      id: number;
-      orderNo: string;
-      partnerCompany: Company;
-    };
     dstLocation: LocationWithoutCompany;
+    order: StockGroupOrder;
+  } | null;
+  orderProcess: {
+    srcWantedDate: string;
+    dstWantedDate: string;
+    srcLocation: LocationWithoutCompany;
+    dstLocation: LocationWithoutCompany;
+    order: StockGroupOrder;
   } | null;
   planShipping: {
     wantedDate: string;
