@@ -11,7 +11,7 @@ interface Order {
   status: OrderStatus;
   isEntrusted: boolean;
   memo: string;
-  stockAcceptedCompanyId: number | null;
+  acceptedCompanyId: number | null;
   isStockRejected: boolean;
   srcDepositEvent: DepositEvent | null;
   dstDepositEvent: DepositEvent | null;
