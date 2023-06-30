@@ -1,7 +1,6 @@
-import { StockEventStatus } from '@prisma/client';
-import { Model } from '../..';
-import { Stock, StockEvent, StockGroup } from '../../models';
-import { PaginationResponse } from '../../models/pagination';
+import { Model } from "../..";
+import { Stock, StockEvent, StockGroup } from "../../models";
+import { PaginationResponse } from "../../models/pagination";
 
 /** 재고그룹 목록 조회 */
 export type StockGroupListResponse = PaginationResponse<StockGroup>;
