@@ -1,4 +1,14 @@
-import { Location, StockEvent } from '.';
+import {
+  Company,
+  Location,
+  Packaging,
+  PaperCert,
+  PaperColor,
+  PaperColorGroup,
+  PaperPattern,
+  Product,
+  StockEvent,
+} from '.';
 import { OrderStatus, OrderType, PlanStatus, PlanType } from './enum';
 
 interface Order {
@@ -30,4 +40,24 @@ export default interface OrderProcess {
   dstWantedDate: string;
   order: Order;
   plan: Plan[];
+  // 외주공정의 주문 원지 정보
+  company: Company;
+  planId: number | null;
+  warehouse: {
+    id: number;
+    name: string;
+    code: string;
+    isPublic: boolean;
+    address: string;
+  } | null;
+  product: Product;
+  packaging: Packaging;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroup: PaperColorGroup | null;
+  paperColor: PaperColor | null;
+  paperPattern: PaperPattern | null;
+  paperCert: PaperCert | null;
+  quantity: number;
 }
