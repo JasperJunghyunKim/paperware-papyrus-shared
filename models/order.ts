@@ -18,7 +18,7 @@ export default interface Order {
   status: OrderStatus;
   isEntrusted: boolean;
   memo: string;
-  stockAcceptedCompanyId: number | null;
+  acceptedCompanyId: number | null;
   isStockRejected: boolean;
   orderStock: OrderStock | null;
   orderDeposit: OrderDeposit | null;

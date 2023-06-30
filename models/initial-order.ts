@@ -11,7 +11,7 @@ export default interface InitialOrder {
   isEntrusted: boolean;
   memo: string;
   wantedDate: string;
-  stockAcceptedCompanyId: number | null;
+  acceptedCompanyId: number | null;
   isStockRejected: boolean;
   orderStock: {
     dstLocation: Location;
