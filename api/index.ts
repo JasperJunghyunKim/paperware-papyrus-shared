@@ -58,5 +58,5 @@ export * from './inhouse/security.response';
 
 export * from './inhouse/inhouse-process-request';
 
-export * from './partner/partner.request';
-export * from './partner/partner.response';
+export * from './inhouse/partner.request';
+export * from './inhouse/partner.response';
