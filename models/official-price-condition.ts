@@ -9,8 +9,8 @@ export default interface OfficialPriceCondition {
   id: number;
   product: Product;
   grammage: number;
-  sizeX: number;
-  sizeY: number;
+  sizeX: number | null;
+  sizeY: number | null;
   paperColorGroup: PaperColorGroup | null;
   paperColor: PaperColor | null;
   paperPattern: PaperPattern | null;
