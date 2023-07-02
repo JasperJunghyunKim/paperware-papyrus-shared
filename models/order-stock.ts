@@ -32,7 +32,6 @@ export default interface OrderStock {
   warehouse: {
     id: number;
     name: string;
-    code: string;
     isPublic: boolean;
     address: string;
   } | null;
