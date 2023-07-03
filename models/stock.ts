@@ -1,13 +1,13 @@
-import { Enum, Plan, StockPrice } from '.';
-import Company from './company';
-import { PlanType } from './enum';
-import Packaging from './packaging';
-import PaperCert from './paper-cert';
-import PaperColor from './paper-color';
-import PaperColorGroup from './paper-color-group';
-import PaperPattern from './paper-pattern';
-import Product from './product';
-import Warehouse from './warehouse';
+import { Enum, Plan, StockPrice } from ".";
+import Company from "./company";
+import { PlanType } from "./enum";
+import Packaging from "./packaging";
+import PaperCert from "./paper-cert";
+import PaperColor from "./paper-color";
+import PaperColorGroup from "./paper-color-group";
+import PaperPattern from "./paper-pattern";
+import Product from "./product";
+import Warehouse from "./warehouse";
 
 export default interface Stock {
   id: number;
@@ -27,7 +27,7 @@ export default interface Stock {
   cachedQuantity: number;
   cachedQuantityAvailable: number;
   isSyncPrice: boolean;
-  stockPrice: StockPrice;
+  stockPrice: StockPrice | null;
   initialPlan: {
     type: PlanType;
   };
