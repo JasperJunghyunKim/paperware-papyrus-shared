@@ -21,6 +21,7 @@ export interface RegisterPartnerRequest {
   create: boolean;
   type: 'PURCHASE' | 'SALES' | 'BOTH';
   partnerNickname: string;
+  businessName: string;
   invoiceCode: string;
   address: string;
   phoneNo: string;
