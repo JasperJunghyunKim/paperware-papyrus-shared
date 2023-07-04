@@ -26,7 +26,7 @@ export interface RegisterPartnerRequest {
   address: string;
   phoneNo: string;
   faxNo: string;
-  email: string;
+  representative: string;
   memo: string;
 }
 

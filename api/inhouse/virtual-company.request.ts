@@ -10,7 +10,6 @@ export interface VirtualCompanyCreateRequest {
   address: string;
   phoneNo: string;
   faxNo: string;
-  email: string;
 }
 
 export type VirtualCompanyUpdateRequest = VirtualCompanyCreateRequest;

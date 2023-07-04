@@ -7,6 +7,5 @@ export default interface Company {
   address: string;
   phoneNo: string;
   faxNo: string;
-  email: string;
   managedById: number | null;
 }
