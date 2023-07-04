@@ -123,6 +123,20 @@ export interface OrderDepositCreateRequest {
   memo?: string;
 }
 
+/** 보관 원지 수정 */
+export interface OrderDepositUpdateAssignRequest {
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY?: number | null;
+  paperColorGroupId?: number | null;
+  paperColorId?: number | null;
+  paperPatternId?: number | null;
+  paperCertId?: number | null;
+  quantity: number;
+}
+
 /** 보관량 목록  */
 export interface OrderDepositListQuery extends PaginationQuery {
   type: DepositType;
