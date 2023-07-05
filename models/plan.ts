@@ -27,9 +27,15 @@ export default interface Plan {
   assignStockEvent: StockEvent | null;
   targetStockEvent: StockEvent[];
   orderStock: {
+    dstLocation: Location;
+    wantedDate: string;
     order: Order;
   } | null;
   orderProcess: {
+    dstLocation: Location;
+    dstWantedDate: string;
+    srcLocation: Location;
+    srcWantedDate: string;
     order: Order;
   } | null;
 }
