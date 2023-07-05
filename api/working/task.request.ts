@@ -29,6 +29,7 @@ export interface TaskUpdateGuillotineRequest {
 
 export interface TaskCreateQuantityRequest extends TaskCreate {
   quantity: number;
+  memo: string;
 }
 
 export interface TaskUpdateQuantityRequest {
