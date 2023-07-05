@@ -1,13 +1,16 @@
 import {
+  Company,
   Enum,
+  Location,
+  Order,
   Packaging,
   PaperCert,
   PaperColor,
   PaperColorGroup,
   PaperPattern,
-  Plan,
   Product,
   Shipping,
+  StockEvent,
 } from '.';
 
 export default interface Invoice {
@@ -25,5 +28,26 @@ export default interface Invoice {
   paperPattern: PaperPattern;
   paperCert: PaperCert;
   quantity: number;
-  plan: Plan;
+  plan: {
+    id: number;
+    planNo: string;
+    status: Enum.PlanStatus;
+    type: Enum.PlanType;
+    company: Company;
+    createdAt: string;
+    assignStockEvent: StockEvent | null;
+    targetStockEvent: StockEvent[];
+    orderStock: {
+      dstLocation: Location;
+      wantedDate: string;
+      order: Order;
+    } | null;
+    orderProcess: {
+      dstLocation: Location;
+      dstWantedDate: string;
+      srcLocation: Location;
+      srcWantedDate: string;
+      order: Order;
+    } | null;
+  };
 }
