@@ -23,6 +23,7 @@ export interface RegisterPartnerRequest {
   partnerNickname: string;
   businessName: string;
   invoiceCode: string;
+  creditLimit: number;
   address: string;
   phoneNo: string;
   faxNo: string;
@@ -38,5 +39,6 @@ export interface BusinessRelationshipRequestRequest {
 export interface UpsertPartnerRequest {
   companyRegistrationNumber: string;
   partnerNickname: string;
+  creditLimit: number;
   memo: string;
 }
