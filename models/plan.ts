@@ -1,4 +1,5 @@
 import { Company, DepositEvent, StockEvent } from '.';
+import { Model } from '..';
 import { OrderStatus, OrderType, PlanStatus, PlanType } from './enum';
 
 interface Order {
@@ -27,14 +28,14 @@ export default interface Plan {
   assignStockEvent: StockEvent | null;
   targetStockEvent: StockEvent[];
   orderStock: {
-    dstLocation: Location;
+    dstLocation: Model.Location;
     wantedDate: string;
     order: Order;
   } | null;
   orderProcess: {
-    dstLocation: Location;
+    dstLocation: Model.Location;
     dstWantedDate: string;
-    srcLocation: Location;
+    srcLocation: Model.Location;
     srcWantedDate: string;
     order: Order;
   } | null;
