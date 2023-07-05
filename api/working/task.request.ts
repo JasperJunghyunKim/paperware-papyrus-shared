@@ -34,6 +34,7 @@ export interface TaskCreateQuantityRequest extends TaskCreate {
 
 export interface TaskUpdateQuantityRequest {
   quantity: number;
+  memo: string;
 }
 
 export interface TaskInsertInputStockRequest {
