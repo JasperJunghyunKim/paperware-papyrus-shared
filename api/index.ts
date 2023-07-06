@@ -60,3 +60,6 @@ export * from './inhouse/inhouse-process-request';
 
 export * from './inhouse/partner.request';
 export * from './inhouse/partner.response';
+
+export * from './tax/tax.request';
+export * from './tax/tax.response';

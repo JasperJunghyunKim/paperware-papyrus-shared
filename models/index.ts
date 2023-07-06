@@ -61,6 +61,8 @@ import OrderEtc from './order-etc';
 import ArrivalStock from './arrival-stock';
 import DiscountRateCondition from './discount-rate-condition';
 
+import TaxInvoice from './tax-invoice';
+
 export * as Enum from './enum';
 export type {
   Accounted,
@@ -122,4 +124,5 @@ export type {
   DiscountRateCondition,
   OrderDepositTradePrice,
   OrderDepositTradeAltBundle,
+  TaxInvoice,
 };
