@@ -1,5 +1,5 @@
-import { Model } from 'src/@shared';
-import { PaginationResponse } from 'src/@shared/models/pagination';
+import { Model } from '../..';
+import { PaginationResponse } from '../../models/pagination';
 
 export type GetTaxInvoiceListResponse = PaginationResponse<Model.TaxInvoice>;
 export type GetTaxInvoiceItemResponse = Model.TaxInvoice;
