@@ -1,13 +1,47 @@
-import { Enum, Plan, StockPrice } from ".";
-import Company from "./company";
-import { PlanType } from "./enum";
-import Packaging from "./packaging";
-import PaperCert from "./paper-cert";
-import PaperColor from "./paper-color";
-import PaperColorGroup from "./paper-color-group";
-import PaperPattern from "./paper-pattern";
-import Product from "./product";
-import Warehouse from "./warehouse";
+import { Enum, Plan, StockPrice } from '.';
+import Company from './company';
+import { DiscountType, OfficialPriceType, PlanType, PriceUnit } from './enum';
+import Packaging from './packaging';
+import PaperCert from './paper-cert';
+import PaperColor from './paper-color';
+import PaperColorGroup from './paper-color-group';
+import PaperPattern from './paper-pattern';
+import Product from './product';
+import Warehouse from './warehouse';
+
+interface TradePrice {
+  suppliedPrice: number;
+  vatPrice: number;
+  isBookClosed: boolean;
+  orderStockTradePrice: {
+    officialPriceType: OfficialPriceType;
+    officialPrice: number;
+    officialPriceUnit: PriceUnit;
+    discountType: DiscountType;
+    discountPrice: number;
+    unitPrice: number;
+    unitPriceUnit: PriceUnit;
+    processPrice: number;
+  } | null;
+}
+
+interface Order {
+  tradePrice: TradePrice[];
+}
+
+interface OrderStock {
+  order: Order;
+}
+
+interface OrderProcess {
+  order: Order;
+}
+
+interface InitialPlan {
+  type: PlanType;
+  orderStock: OrderStock | null;
+  orderProcess: OrderProcess | null;
+}
 
 export default interface Stock {
   id: number;
@@ -28,7 +62,5 @@ export default interface Stock {
   cachedQuantityAvailable: number;
   isSyncPrice: boolean;
   stockPrice: StockPrice | null;
-  initialPlan: {
-    type: PlanType;
-  };
+  initialPlan: InitialPlan;
 }
