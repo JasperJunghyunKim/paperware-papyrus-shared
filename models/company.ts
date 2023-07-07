@@ -2,6 +2,8 @@ export default interface Company {
   id: number;
   businessName: string;
   companyRegistrationNumber: string;
+  bizType: string;
+  bizItem: string;
   invoiceCode: string;
   representative: string;
   address: string;

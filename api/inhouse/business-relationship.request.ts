@@ -22,6 +22,8 @@ export interface RegisterPartnerRequest {
   type: 'PURCHASE' | 'SALES' | 'BOTH';
   partnerNickname: string;
   businessName: string;
+  bizType: string;
+  bizItem: string;
   invoiceCode: string;
   creditLimit: number;
   address: string;
