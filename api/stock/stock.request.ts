@@ -5,8 +5,18 @@ import { PaginationQuery } from '../../models/pagination';
 export interface StockGroupListQuery extends PaginationQuery {
   planId?: 'any' | number;
   isDirectShippingIncluded?: 'true' | 'false';
+  isZeroQuantityIncluded?: 'true' | 'false';
+  initialPlanId?: number;
 
-  /// 검색 필드
+  /// 검색 필드 (다중검색은 | 로 구분)
+  warehouseIds?: string;
+  packagingIds?: string;
+  paperTypeIds?: string;
+  manufacturerIds?: string;
+  minGrammage?: number;
+  maxGrammage?: number;
+  sizeX?: number;
+  sizeY?: number;
 }
 
 /** 자사 재고그룹 히스토리 요청 */

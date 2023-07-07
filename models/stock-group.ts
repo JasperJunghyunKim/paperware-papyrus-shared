@@ -59,4 +59,5 @@ export default interface StockGroup {
   totalArrivalQuantity: number;
   storingQuantity: number;
   nonStoringQuantity: number;
+  lossRate: number | null;
 }
