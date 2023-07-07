@@ -93,6 +93,15 @@ export interface ArrivalStockCreateRequest {
 /** 거래처 재고그룹 목록 조회 */
 export type PartnerStockGroupListQuery = PaginationQuery & {
   companyId?: number;
+
+  /// 검색 필드 (다중검색은 | 로 구분)
+  packagingIds?: string;
+  paperTypeIds?: string;
+  manufacturerIds?: string;
+  minGrammage?: number;
+  maxGrammage?: number;
+  sizeX?: number;
+  sizeY?: number;
 };
 
 /** (deprecated) 재고 그룹 수량 조회 */
