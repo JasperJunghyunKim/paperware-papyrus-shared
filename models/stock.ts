@@ -38,6 +38,7 @@ interface OrderProcess {
 }
 
 interface InitialPlan {
+  planNo: string;
   type: PlanType;
   orderStock: OrderStock | null;
   orderProcess: OrderProcess | null;
