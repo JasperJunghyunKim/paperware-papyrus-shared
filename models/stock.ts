@@ -26,6 +26,8 @@ interface TradePrice {
 }
 
 interface Order {
+  srcCompany: Company;
+  dstCompany: Company;
   tradePrice: TradePrice[];
 }
 
