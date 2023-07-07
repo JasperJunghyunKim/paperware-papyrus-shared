@@ -7,6 +7,8 @@ export interface VirtualCompanyCreateRequest {
   companyRegistrationNumber: string;
   invoiceCode: string;
   representative: string;
+  bizType: string;
+  bizItem: string;
   address: string;
   phoneNo: string;
   faxNo: string;
