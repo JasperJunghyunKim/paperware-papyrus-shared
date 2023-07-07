@@ -18,5 +18,6 @@ export default interface Deposit {
   paperColor: PaperColor | null;
   paperPattern: PaperPattern | null;
   paperCert: PaperCert | null;
+  lossRate: number | null;
   quantity: number;
 }

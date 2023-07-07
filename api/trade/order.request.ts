@@ -141,6 +141,15 @@ export interface OrderDepositUpdateAssignRequest {
 export interface OrderDepositListQuery extends PaginationQuery {
   type: DepositType;
   companyRegistrationNumber?: string;
+
+  /// 검색 필드 (다중검색은 | 로 구분)
+  packagingIds?: string;
+  paperTypeIds?: string;
+  manufacturerIds?: string;
+  minGrammage?: number;
+  maxGrammage?: number;
+  sizeX?: number;
+  sizeY?: number;
 }
 
 /** 보관량 증감 */
