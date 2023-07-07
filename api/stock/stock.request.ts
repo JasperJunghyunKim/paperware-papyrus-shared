@@ -46,6 +46,8 @@ export interface StockListQuery {
   paperPatternId?: number;
   paperCertId?: number;
   planId?: number;
+  initialPlanId?: number;
+  isZeroQuantityIncluded?: 'true' | 'false';
 }
 
 /** 재고 생성 (신규 등록) */
