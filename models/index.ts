@@ -24,6 +24,7 @@ import ShippingItem from './shipping-item';
 import Stock from './stock';
 import StockEvent from './stock-event';
 import StockGroup from './stock-group';
+import PlanStockGroup from './plan-stock-group';
 import StockPrice from './stock-price';
 import StockQuantity from './stock-quantity';
 import Task from './task';
@@ -106,6 +107,7 @@ export type {
   Stock,
   StockEvent,
   StockGroup,
+  PlanStockGroup,
   StockPrice,
   StockQuantity,
   Task,

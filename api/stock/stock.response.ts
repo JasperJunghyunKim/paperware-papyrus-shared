@@ -1,6 +1,7 @@
-import { Model } from "../..";
-import { Stock, StockEvent, StockGroup } from "../../models";
-import { PaginationResponse } from "../../models/pagination";
+import PlanStockGroup from '../../models/plan-stock-group';
+import { Model } from '../..';
+import { Stock, StockEvent, StockGroup } from '../../models';
+import { PaginationResponse } from '../../models/pagination';
 
 /** 재고그룹 목록 조회 */
 export type StockGroupListResponse = PaginationResponse<StockGroup>;
@@ -25,3 +26,6 @@ export type StockGroupQuantityResponse = Model.StockQuantity;
 
 /** 재고그룹 상세 조회 */
 export type StockGroupDetailResponse = StockGroup;
+
+/** 플랜에 연결된 재고 그룹 */
+export type PlanStockGroupListResponse = PaginationResponse<PlanStockGroup>;
