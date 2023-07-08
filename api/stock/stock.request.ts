@@ -1,3 +1,4 @@
+import { StockPrice } from '../../models';
 import { DiscountType, OfficialPriceType, PriceUnit } from '../../models/enum';
 import { PaginationQuery } from '../../models/pagination';
 
@@ -139,4 +140,23 @@ export interface StockGroupDetailQuery {
 /** 재고 증감 */
 export interface StockQuantityChangeRequest {
   quantity: number;
+}
+
+/** 도착예정재고 금액 수정 */
+export interface ArrivalStockPriceUpdateRequest {
+  // 스펙 (재고그룹 특정)
+  planId: number;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY?: number;
+  paperColorGroupId?: number;
+  paperColorId?: number;
+  paperPatternId?: number;
+  paperCertId?: number;
+
+  // 변경내용
+  isSyncPrice: boolean;
+  stockPrice: StockPrice;
 }
