@@ -31,6 +31,12 @@ export interface RegisterPartnerRequest {
   faxNo: string;
   representative: string;
   memo: string;
+  partnerTaxManager: {
+    name: string;
+    phoneNo: string;
+    email: string;
+    isDefault: boolean;
+  }[];
 }
 
 export interface BusinessRelationshipRequestRequest {
