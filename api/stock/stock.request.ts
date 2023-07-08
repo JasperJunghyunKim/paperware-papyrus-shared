@@ -160,3 +160,31 @@ export interface ArrivalStockPriceUpdateRequest {
   isSyncPrice: boolean;
   stockPrice: StockPrice;
 }
+
+/** 도착예정재고 스펙 수정 */
+export interface ArrivalStockSpecUpdateRequest {
+  // 스펙 (재고그룹 특정)
+  planId: number;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY?: number;
+  paperColorGroupId?: number;
+  paperColorId?: number;
+  paperPatternId?: number;
+  paperCertId?: number;
+
+  // 변경내용
+  spec: {
+    productId: number;
+    packagingId: number;
+    grammage: number;
+    sizeX: number;
+    sizeY?: number;
+    paperColorGroupId?: number;
+    paperColorId?: number;
+    paperPatternId?: number;
+    paperCertId?: number;
+  };
+}
