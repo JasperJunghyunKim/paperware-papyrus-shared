@@ -57,5 +57,6 @@ export default interface PlanStockGroup {
   paperPattern: PaperPattern | null;
   paperCert: PaperCert | null;
   plan: StockGroupPlan | null;
+  isAssigned: boolean;
   quantity: number;
 }
