@@ -101,7 +101,7 @@ export interface OrderDepositTradePriceUpdateRequest {
 export interface TradePriceUpdateRequest {
   suppliedPrice: number;
   vatPrice: number;
-  isSyncPrice: boolean;
+  isSyncPrice?: boolean;
   orderStockTradePrice?: OrderStockTradePriceUpdateRequest;
   orderDepositTradePrice?: OrderStockTradePriceUpdateRequest;
 }
