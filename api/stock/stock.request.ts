@@ -188,3 +188,18 @@ export interface ArrivalStockSpecUpdateRequest {
     paperCertId?: number;
   };
 }
+
+/** 도착예정재고 스펙 삭제 */
+export interface ArrivalStockDeleteQuery {
+  // 스펙 (재고그룹 특정)
+  planId: number;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY?: number;
+  paperColorGroupId?: number;
+  paperColorId?: number;
+  paperPatternId?: number;
+  paperCertId?: number;
+}
