@@ -18,7 +18,6 @@ export default interface ArrivalStock {
   paperColor: PaperColor | null;
   paperPattern: PaperPattern | null;
   paperCert: PaperCert | null;
-  isSyncPrice: boolean;
   stockPrice: StockPrice | null;
   tradePrice: StockPrice | null;
 }

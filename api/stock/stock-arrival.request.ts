@@ -48,6 +48,5 @@ export interface StockArrivalPriceUpdateRequest {
   paperColorId: number | null;
   paperPatternId: number | null;
   paperCertId: number | null;
-  isSyncPrice: boolean;
   stockPrice?: StockPrice | null;
 }

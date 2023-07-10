@@ -157,7 +157,6 @@ export interface ArrivalStockPriceUpdateRequest {
   paperCertId?: number;
 
   // 변경내용
-  isSyncPrice: boolean;
   stockPrice: StockPrice;
 }
 
