@@ -26,18 +26,22 @@ interface StockGroupPlan {
   orderStock: {
     wantedDate: string;
     dstLocation: LocationWithoutCompany;
+    isDirectShipping: boolean;
     order: StockGroupOrder;
   } | null;
   orderProcess: {
     srcWantedDate: string;
     dstWantedDate: string;
     srcLocation: LocationWithoutCompany;
+    isSrcDirectShipping: boolean;
     dstLocation: LocationWithoutCompany;
+    isDstDriectShipping: boolean;
     order: StockGroupOrder;
   } | null;
   planShipping: {
     wantedDate: string;
     dstLocation: LocationWithoutCompany;
+    isDirectShipping: boolean;
   } | null;
 }
 
