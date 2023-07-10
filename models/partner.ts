@@ -6,5 +6,4 @@ export default interface Partner {
   partnerNickName: string;
   creditLimit: number;
   memo: string;
-  partnerTaxManager: PartnerTaxManager[];
 }
