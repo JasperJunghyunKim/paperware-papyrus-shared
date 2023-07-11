@@ -1,4 +1,4 @@
-import { Plan, StockEvent } from '../../models';
+import { Plan, Stock, StockEvent } from '../../models';
 import { PaginationResponse } from '../../models/pagination';
 
 export type PlanListResponse = PaginationResponse<Plan>;
@@ -10,4 +10,5 @@ export interface InputStockResponse {
   stockId: number;
   quantity: number;
   useRemainder: boolean;
+  stock: Stock;
 }
