@@ -1,5 +1,5 @@
 export default interface PartnerTaxManager {
-  id: string;
+  id: number;
   name: string;
   phoneNo: string;
   email: string;

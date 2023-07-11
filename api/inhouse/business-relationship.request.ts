@@ -49,10 +49,4 @@ export interface UpsertPartnerRequest {
   partnerNickname: string;
   creditLimit: number;
   memo: string;
-  partnerTaxManager: {
-    name: string;
-    phoneNo: string;
-    email: string;
-    isDefault: boolean;
-  }[];
 }
