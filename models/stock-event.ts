@@ -35,4 +35,5 @@ export default interface StockEvent {
   status: StockEventStatus;
   createdAt: string;
   plan: Plan;
+  useRemainder: boolean;
 }
