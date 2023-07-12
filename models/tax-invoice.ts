@@ -4,7 +4,6 @@ import Partner from './partner';
 
 export default interface TaxInvoice {
   id: number;
-  companyRegistrationNumber: string;
   invoicerMgtKey: string;
   purposeType: TaxInvoicePurposeType;
   ntsconfirmNum: string | null;
@@ -12,13 +11,28 @@ export default interface TaxInvoice {
   writeDate: string;
   issuedDate: string | null;
   sendedDate: string | null;
+  // 공급자
+  dstCompanyRegistrationNumber: string;
+  dstCompanyName: string;
+  dstCompanyRepresentative: string;
+  dstCompanyAddress: string;
+  dstCompanyBizType: string;
+  dstCompanyBizItem: string;
+  dstEmail: string;
+  // 공급받는자
   partner: Partner;
+  srcCompanyRegistrationNumber: string;
+  srcCompanyName: string;
+  srcCompanyRepresentative: string;
+  srcCompanyAddress: string;
+  srcCompanyBizType: string;
+  srcCompanyBizItem: string;
+  srcEmail: string;
+  srcEmail2: string;
+
   totalPrice: number;
   suppliedPrice: number;
   vatPrice: number;
   memo: string;
-  dstEmail: string;
-  srcEmail: string;
-  srcEmail2: string;
   order: Order[];
 }

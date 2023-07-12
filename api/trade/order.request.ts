@@ -12,6 +12,13 @@ export interface OrderListQuery extends PaginationQuery {
   srcCompanyId: number;
   /** 구매처 */
   dstCompanyId: number;
+
+  /** 구매자 사업자등록번호 */
+  srcCompanyRegistrationNumber?: string;
+  /** 마감여부 */
+  bookClosed?: 'true' | 'false';
+  /** month 특정 */
+  month?: string;
 }
 
 export interface OrderStockCreateRequest {

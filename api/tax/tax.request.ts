@@ -4,7 +4,7 @@ import { PaginationQuery } from '../../models/pagination';
 export type GetTaxInvoiceListQuery = PaginationQuery;
 
 export type CreateTaxInvoiceRequest = {
-  companyRegistrationNumber: string;
+  companyId: number;
   purposeType: TaxInvoicePurposeType;
   writeDate: string;
 };
