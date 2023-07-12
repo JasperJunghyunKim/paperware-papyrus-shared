@@ -1,13 +1,16 @@
+import { TaxInvoicePurposeType } from '../../models/enum';
 import { PaginationQuery } from '../../models/pagination';
 
 export type GetTaxInvoiceListQuery = PaginationQuery;
 
 export type CreateTaxInvoiceRequest = {
   companyRegistrationNumber: string;
+  purposeType: TaxInvoicePurposeType;
   writeDate: string;
 };
 
 export type UpdateTaxInvoiceRequest = {
+  purposeType: TaxInvoicePurposeType;
   writeDate: string;
   dstEmail?: string;
   srcEmail?: string;

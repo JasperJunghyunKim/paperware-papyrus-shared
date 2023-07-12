@@ -137,3 +137,12 @@ export type InvoiceStatus =
   | 'WAIT_SHIPPING'
   | 'ON_SHIPPING'
   | 'DONE_SHIPPING';
+export type TaxInvoiceStatus =
+  | 'PREPARING'
+  | 'ON_ISSUE'
+  | 'ISSUED'
+  | 'ISSUE_FAILED'
+  | 'ON_SEND'
+  | 'SENDED'
+  | 'SEND_FAILED';
+export type TaxInvoicePurposeType = 'RECEIPT' | 'CHARGE';
