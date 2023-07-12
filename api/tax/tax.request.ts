@@ -19,3 +19,8 @@ export type UpdateTaxInvoiceRequest = {
 export type AddOrderToTaxInvoiceRequest = {
   orderIds: number[];
 };
+
+/** 매출 삭제 */
+export type DeleteOrderFromTaxInvoiceRequest = {
+  orderIds: number[];
+};
