@@ -1,3 +1,4 @@
+import { Order } from '../../models';
 import { Model } from '../..';
 import { PaginationResponse } from '../../models/pagination';
 
@@ -11,3 +12,6 @@ export type CreateTaxInvoiceResponse = {
 export type UpdateTaxInvoiceResponse = {
   id: number;
 };
+
+/** 등록된 매출 목록 */
+export type TaxInvoiceOrderListResponse = PaginationResponse<Order>;
