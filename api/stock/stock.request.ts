@@ -145,7 +145,7 @@ export interface StockQuantityChangeRequest {
 /** 도착예정재고 금액 수정 */
 export interface ArrivalStockPriceUpdateRequest {
   // 스펙 (재고그룹 특정)
-  planId: number;
+  initialPlanId: number;
   productId: number;
   packagingId: number;
   grammage: number;
