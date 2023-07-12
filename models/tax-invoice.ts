@@ -30,6 +30,11 @@ export default interface TaxInvoice {
   srcEmail: string;
   srcEmail2: string;
 
+  cash: number | null;
+  check: number | null;
+  note: number | null;
+  credit: number | null;
+
   totalPrice: number;
   suppliedPrice: number;
   vatPrice: number;

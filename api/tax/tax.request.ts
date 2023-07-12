@@ -16,6 +16,11 @@ export type UpdateTaxInvoiceRequest = {
   srcEmail?: string;
   srcEmail2?: string;
   memo?: string;
+
+  cash?: number;
+  check?: number;
+  note?: number;
+  credit?: number;
 };
 
 /** 매출 추가 */
