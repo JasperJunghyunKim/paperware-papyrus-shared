@@ -7,4 +7,10 @@ export type CreateTaxInvoiceRequest = {
   writeDate: string;
 };
 
-export type UpdateTaxInvoiceRequest = {};
+export type UpdateTaxInvoiceRequest = {
+  writeDate: string;
+  dstEmail?: string;
+  srcEmail?: string;
+  srcEmail2?: string;
+  memo?: string;
+};
