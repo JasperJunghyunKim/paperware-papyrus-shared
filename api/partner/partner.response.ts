@@ -6,3 +6,5 @@ export type PartnerResponse = Partner;
 
 export type PartnerTaxManagerListResponse =
   PaginationResponse<PartnerTaxManager>;
+
+export type PartnerTaxManagerItemResponse = PartnerTaxManager;
