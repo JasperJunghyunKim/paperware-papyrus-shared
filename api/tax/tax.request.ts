@@ -14,3 +14,8 @@ export type UpdateTaxInvoiceRequest = {
   srcEmail2?: string;
   memo?: string;
 };
+
+/** 매출 추가 */
+export type AddOrderToTaxInvoiceRequest = {
+  orderIds: number[];
+};
