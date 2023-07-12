@@ -8,6 +8,7 @@ export interface StockGroupListQuery extends PaginationQuery {
   isDirectShippingIncluded?: 'true' | 'false';
   isZeroQuantityIncluded?: 'true' | 'false';
   initialPlanId?: number;
+  orderProcessIncluded?: 'true' | 'false';
 
   /// 검색 필드 (다중검색은 | 로 구분)
   warehouseIds?: string;
