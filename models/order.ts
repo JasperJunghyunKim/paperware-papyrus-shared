@@ -4,6 +4,7 @@ import {
   OrderEtc,
   OrderProcess,
   OrderStock,
+  TradePrice,
 } from '.';
 import Company from './company';
 import { OrderStatus, OrderType } from './enum';
@@ -26,4 +27,5 @@ export default interface Order {
   orderEtc: OrderEtc | null;
   srcDepositEvent: DepositEvent | null;
   dstDepositEvent: DepositEvent | null;
+  tradePrice: TradePrice[];
 }
