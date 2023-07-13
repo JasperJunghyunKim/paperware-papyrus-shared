@@ -39,5 +39,5 @@ export default interface TaxInvoice {
   suppliedPrice: number;
   vatPrice: number;
   memo: string;
-  order: Order[];
+  item: string;
 }
