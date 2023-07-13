@@ -17,6 +17,8 @@ export interface OrderListQuery extends PaginationQuery {
   srcCompanyRegistrationNumber?: string;
   /** 마감여부 */
   bookClosed?: 'true' | 'false';
+  /** year 특정 */
+  year?: string;
   /** month 특정 */
   month?: string;
 }
