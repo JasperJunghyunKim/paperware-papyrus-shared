@@ -89,7 +89,7 @@ export interface ArrivalStockCreateRequest {
   paperPatternId?: number | null;
   paperCertId?: number | null;
   quantity: number;
-  stockPrice: StockCreateStockPriceRequest;
+  stockPrice?: StockCreateStockPriceRequest;
   dstLocationId: number;
   wantedDate: string;
 }
@@ -141,6 +141,20 @@ export interface StockGroupDetailQuery {
 /** 재고 증감 */
 export interface StockQuantityChangeRequest {
   quantity: number;
+}
+
+/** 도착예정재고 금액 */
+export interface ArrivalStockPriceQuery {
+  planId: number;
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY?: number;
+  paperColorGroupId?: number;
+  paperColorId?: number;
+  paperPatternId?: number;
+  paperCertId?: number;
 }
 
 /** 도착예정재고 금액 수정 */

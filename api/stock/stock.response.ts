@@ -1,6 +1,6 @@
 import PlanStockGroup from '../../models/plan-stock-group';
 import { Model } from '../..';
-import { Stock, StockEvent, StockGroup } from '../../models';
+import { Stock, StockEvent, StockGroup, StockPrice } from '../../models';
 import { PaginationResponse } from '../../models/pagination';
 
 /** 재고그룹 목록 조회 */
@@ -29,3 +29,6 @@ export type StockGroupDetailResponse = StockGroup;
 
 /** 플랜에 연결된 재고 그룹 */
 export type PlanStockGroupListResponse = PaginationResponse<PlanStockGroup>;
+
+/** 도착예정재고 금액 */
+export type ArrivalStockPriceResponse = StockPrice;

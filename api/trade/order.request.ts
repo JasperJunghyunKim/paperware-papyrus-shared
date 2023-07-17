@@ -66,8 +66,7 @@ export interface OrderStockArrivalCreateRequest {
   paperPatternId?: number | null;
   paperCertId?: number | null;
   quantity: number;
-  isSyncPrice: boolean;
-  stockPrice: Api.StockCreateStockPriceRequest;
+  stockPrice?: Api.StockCreateStockPriceRequest;
 }
 
 /** 거래금액 수정 */
