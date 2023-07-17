@@ -148,8 +148,8 @@ export interface OrderDepositUpdateAssignRequest {
 
 /** 보관량 목록  */
 export interface OrderDepositListQuery extends PaginationQuery {
-  type: DepositType;
-  companyRegistrationNumber?: string;
+  srcCompanyRegistrationNumber?: string;
+  dstCompanyRegistrationNumber?: string;
 
   /// 검색 필드 (다중검색은 | 로 구분)
   packagingIds?: string;
@@ -163,8 +163,8 @@ export interface OrderDepositListQuery extends PaginationQuery {
 
 /** 보관량 증감 */
 export interface DepositCreateRequest {
-  type: DepositType;
-  partnerCompanyRegistrationNumber: string;
+  srcCompanyRegistrationNumber?: string;
+  dstCompanyRegistrationNumber?: string;
   productId: number;
   packagingId: number;
   grammage: number;
