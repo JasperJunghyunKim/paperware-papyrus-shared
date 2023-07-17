@@ -7,7 +7,8 @@ import Product from './product';
 
 export default interface Deposit {
   id: number;
-  companyRegistrationNumber: string;
+  srcCompanyRegistrationNumber: string;
+  dstCompanyRegistrationNumber: string;
   partnerNickName: string;
   packaging: Packaging;
   product: Product;
