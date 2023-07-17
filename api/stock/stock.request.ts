@@ -186,6 +186,7 @@ export interface ArrivalStockSpecUpdateRequest {
     paperColorId?: number;
     paperPatternId?: number;
     paperCertId?: number;
+    quantity: number;
   };
 }
 
