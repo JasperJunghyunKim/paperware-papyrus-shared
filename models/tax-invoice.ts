@@ -27,13 +27,10 @@ export default interface TaxInvoice {
   srcCompanyAddress: string;
   srcCompanyBizType: string;
   srcCompanyBizItem: string;
-  srcTaxManagers: {
-    id: number;
-    name: string;
-    phoneNo: string;
-    email: string;
-    isDefault: boolean;
-  }[];
+  srcEmail: string;
+  srcEmailName: string;
+  srcEmail2: string;
+  srcEmailName2: string;
 
   cash: number | null;
   check: number | null;
