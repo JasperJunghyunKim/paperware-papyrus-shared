@@ -14,7 +14,9 @@ export type UpdateTaxInvoiceRequest = {
   writeDate: string;
   dstEmail?: string;
   srcEmail?: string;
+  srcEmailName?: string;
   srcEmail2?: string;
+  srcEmailName2: string;
   memo?: string;
 
   cash?: number;
