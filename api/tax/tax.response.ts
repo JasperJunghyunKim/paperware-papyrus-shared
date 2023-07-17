@@ -15,3 +15,8 @@ export type UpdateTaxInvoiceResponse = {
 
 /** 등록된 매출 목록 */
 export type TaxInvoiceOrderListResponse = PaginationResponse<Order>;
+
+/** 세금계산서 발행 */
+export type TaxInvoiceIssueResponse = {
+  certUrl: string | null;
+};
