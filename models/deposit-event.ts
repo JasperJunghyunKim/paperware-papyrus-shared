@@ -1,4 +1,3 @@
-import Deposit from './deposit';
 import OrderDeposit from './order-deposit';
 import Packaging from './packaging';
 import PaperCert from './paper-cert';

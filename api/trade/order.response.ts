@@ -3,8 +3,15 @@ import {
   Deposit,
   DepositEvent,
   Order,
+  OrderDeposit,
   OrderEtc,
   OrderProcess,
+  Packaging,
+  PaperCert,
+  PaperColor,
+  PaperColorGroup,
+  PaperPattern,
+  Product,
   StockGroup,
   TradePrice,
 } from '../../models';
@@ -23,7 +30,25 @@ export type TradePriceResponse = TradePrice;
 export type DepositListResponse = PaginationResponse<Deposit>;
 
 /** 보관량 히스토리 조회 */
-export type DepositHistoryResponse = DepositEvent[];
+export type DepositHistoryResponse = {
+  id: number;
+  change: number;
+  createdAt: string;
+  memo: string;
+  deposit: {
+    id: number;
+    packaging: Packaging;
+    product: Product;
+    grammage: number;
+    sizeX: number;
+    sizeY: number;
+    paperColorGroup: PaperColorGroup | null;
+    paperColor: PaperColor | null;
+    paperPattern: PaperPattern | null;
+    paperCert: PaperCert | null;
+  };
+  orderDeposit: OrderDeposit | null;
+}[];
 
 /** 주문 보관 상세 */
 export type OrderDepositResponse = {
