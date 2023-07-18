@@ -20,7 +20,9 @@ export type StockListResponse = PaginationResponse<Stock>;
 export type StockDetailResponse = Stock;
 
 /** 거래처 재고그룹 목록 조회 */
-export type PartnerStockGroupListResponse = PaginationResponse<StockGroup>;
+export type PartnerStockGroupListResponse = PaginationResponse<
+  StockGroup & { partnerCompanyRegistrationNumber: string }
+>;
 
 export type StockGroupQuantityResponse = Model.StockQuantity;
 
