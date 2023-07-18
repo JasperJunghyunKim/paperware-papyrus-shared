@@ -25,7 +25,6 @@ export default interface Order {
   orderDeposit: OrderDeposit | null;
   orderProcess: OrderProcess | null;
   orderEtc: OrderEtc | null;
-  srcDepositEvent: DepositEvent | null;
-  dstDepositEvent: DepositEvent | null;
+  depositEvent: DepositEvent | null;
   tradePrice: TradePrice[];
 }
