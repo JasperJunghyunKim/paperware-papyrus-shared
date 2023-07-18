@@ -19,6 +19,10 @@ export interface StockGroupListQuery extends PaginationQuery {
   maxGrammage?: number;
   sizeX?: number;
   sizeY?: number;
+  partnerCompanyRegistrationNumbers?: string;
+  locationIds?: string;
+  minWantedDate?: string;
+  maxWantedDate?: string;
 }
 
 /** 자사 재고그룹 히스토리 요청 */
