@@ -63,6 +63,8 @@ import ArrivalStock from './arrival-stock';
 import DiscountRateCondition from './discount-rate-condition';
 
 import TaxInvoice from './tax-invoice';
+import OrderRequest from './order-request';
+import OrderRequestItem from './order-request-item';
 
 export * as Enum from './enum';
 export type {
@@ -127,4 +129,6 @@ export type {
   OrderDepositTradePrice,
   OrderDepositTradeAltBundle,
   TaxInvoice,
+  OrderRequest,
+  OrderRequestItem,
 };
