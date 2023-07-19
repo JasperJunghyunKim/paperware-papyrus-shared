@@ -1,4 +1,4 @@
-import { AccountedType, CardCompany, Method, Subject } from './enum';
+import { AccountedType, Bank, CardCompany, Method, Subject } from './enum';
 
 export default interface ByCard {
   /**
@@ -53,6 +53,14 @@ export default interface ByCard {
    * 계좌 이름
    */
   accountName: string;
+  /**
+   * 계좌번호
+   */
+  bankAccountNumber: string;
+  /**
+   * 은행
+   */
+  bankComapny: Bank;
   /**
    * 카드 이름
    */
