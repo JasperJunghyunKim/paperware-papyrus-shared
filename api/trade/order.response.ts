@@ -33,7 +33,12 @@ export type DepositListResponse = PaginationResponse<Deposit>;
 export type DepositHistoryResponse = {
   id: number;
   change: number;
-  companyRegistrationNumber: string;
+  user: {
+    name: string;
+    company: {
+      companyRegistrationNumber: string;
+    };
+  };
   createdAt: string;
   memo: string;
   deposit: {
