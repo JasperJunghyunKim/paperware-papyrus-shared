@@ -8,6 +8,8 @@ export type ByCardCreateRequest = Omit<
   | 'cardNumber'
   | 'cardCompany'
   | 'accountName'
+  | 'bankAccountNumber'
+  | 'bankComapny'
 >;
 export type ByCardUpdateRequest = Omit<
   ByCard,
@@ -22,4 +24,6 @@ export type ByCardUpdateRequest = Omit<
   | 'cardCompany'
   | 'bankAccountId'
   | 'accountName'
+  | 'bankAccountNumber'
+  | 'bankComapny'
 >;
