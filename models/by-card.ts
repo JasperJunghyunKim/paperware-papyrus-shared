@@ -44,11 +44,11 @@ export default interface ByCard {
   /**
    * 카드 식별자
    */
-  cardId: number;
+  cardId?: number;
   /**
    * 은행 식별자
    */
-  bankAccountId: number;
+  bankAccountId?: number;
   /**
    * 계좌 이름
    */

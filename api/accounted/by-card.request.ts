@@ -2,7 +2,6 @@ import { ByCard } from '../../models';
 
 export type ByCardCreateRequest = Omit<
   ByCard,
-  | 'bankAccountId'
   | 'accountedId'
   | 'partnerNickName'
   | 'cardName'
