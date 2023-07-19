@@ -18,3 +18,8 @@ export interface OrderRequestCreateRequest {
     memo?: string;
   }[];
 }
+
+/** 퀵주문상품 처리완료 */
+export interface OrderRequestItemDoneRequest {
+  dstMemo?: string;
+}
