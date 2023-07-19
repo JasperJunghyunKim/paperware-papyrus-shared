@@ -1,7 +1,7 @@
 import { PaginationQuery } from '../../models/pagination';
 
-/** 퀵주문 목록 */
-export interface OrderRequestListQuery extends PaginationQuery {
+/** 퀵주문 상품 목록 */
+export interface OrderRequestItemListQuery extends PaginationQuery {
   srcCompanyId: number;
   dstCompanyId: number;
 }

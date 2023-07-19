@@ -1,4 +1,4 @@
-import { Location, OrderRequestItem } from '.';
+import { OrderRequestItem } from '.';
 
 interface Company {
   id: number;
@@ -10,6 +10,13 @@ interface Company {
   invoiceCode: string;
   bizType: string;
   bizItem: string;
+  address: string;
+}
+
+interface Location {
+  id: number;
+  name: string;
+  isPublic: boolean;
   address: string;
 }
 

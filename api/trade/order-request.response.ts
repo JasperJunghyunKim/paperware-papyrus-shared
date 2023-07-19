@@ -1,7 +1,7 @@
-import { Location, OrderRequestItem } from '../../models';
+import { Location, OrderRequest, OrderRequestItem } from '../../models';
 import { PaginationResponse } from '../../models/pagination';
 
-export type OrderRequestListResponse = PaginationResponse<
+export type OrderRequestItemListResponse = PaginationResponse<
   OrderRequestItem & {
     orderRequest: {
       id: number;
@@ -42,3 +42,6 @@ export type OrderRequestListResponse = PaginationResponse<
     };
   }
 >;
+
+/** 퀵주문 상세 */
+export type OrderRequestResponse = OrderRequest;
