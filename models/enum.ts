@@ -146,3 +146,8 @@ export type TaxInvoiceStatus =
   | 'SENDED'
   | 'SEND_FAILED';
 export type TaxInvoicePurposeType = 'RECEIPT' | 'CHARGE';
+export type OrderRequestItemStatus =
+  | 'REQUESTED'
+  | 'ON_CHECKING'
+  | 'DONE'
+  | 'CANCELLED';

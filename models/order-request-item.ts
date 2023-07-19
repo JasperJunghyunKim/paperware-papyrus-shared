@@ -1,4 +1,5 @@
 import { Location } from '.';
+import { OrderRequestItemStatus } from './enum';
 
 export default interface OrderRequestItem {
   id: number;
@@ -7,5 +8,5 @@ export default interface OrderRequestItem {
   quantity: string;
   memo: string;
   dstMemo: string;
-  status: any;
+  status: OrderRequestItemStatus;
 }
