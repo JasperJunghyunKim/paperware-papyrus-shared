@@ -15,6 +15,7 @@ import {
   StockGroup,
   TradePrice,
 } from '../../models';
+import { OrderStatus, OrderType } from '../../models/enum';
 
 export type OrderListResponse = PaginationResponse<Order>;
 export type OrderItemResponse = Order;
@@ -33,6 +34,15 @@ export type DepositListResponse = PaginationResponse<Deposit>;
 export type DepositHistoryResponse = {
   id: number;
   change: number;
+  targetOrder: {
+    id: number;
+    orderType: OrderType;
+    orderNo: string;
+    orderDate: string;
+    srcCompanyId: number;
+    dstCompanyId: number;
+    status: OrderStatus;
+  } | null;
   user: {
     name: string;
     company: {
