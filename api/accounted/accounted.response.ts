@@ -15,7 +15,7 @@ export type AccountedUnpaidListResponse = PaginationResponse<{
   price4: number; // N-2월
   price5: number; // N-3월
   price6: number; // N-4월
-  price7: number; // N-5월
+  price7: number; // N-5월 이전
 }> & {
   // footer
   totalPrice: {
@@ -26,6 +26,6 @@ export type AccountedUnpaidListResponse = PaginationResponse<{
     price4: number; // N-2월
     price5: number; // N-3월
     price6: number; // N-4월
-    price7: number; // N-5월
+    price7: number; // N-5월 이전
   };
 };
