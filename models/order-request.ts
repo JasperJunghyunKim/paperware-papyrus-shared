@@ -29,5 +29,6 @@ export default interface OrderRequest {
   location: Location;
   wantedDate: string;
   memo: string;
+  createdAt: string;
   orderRequestItems: OrderRequestItem[];
 }
