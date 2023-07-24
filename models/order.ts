@@ -4,10 +4,16 @@ import {
   OrderEtc,
   OrderProcess,
   OrderStock,
+  TaxInvoice,
   TradePrice,
 } from '.';
 import Company from './company';
-import { OrderStatus, OrderType } from './enum';
+import {
+  OrderStatus,
+  OrderType,
+  TaxInvoicePurposeType,
+  TaxInvoiceStatus,
+} from './enum';
 
 export default interface Order {
   id: number;
@@ -27,4 +33,14 @@ export default interface Order {
   orderEtc: OrderEtc | null;
   depositEvent: DepositEvent | null;
   tradePrice: TradePrice[];
+  taxInvoice: {
+    id: number;
+    invoicerMgtKey: string;
+    purposeType: TaxInvoicePurposeType;
+    ntsconfirmNum: string | null;
+    status: TaxInvoiceStatus;
+    writeDate: string;
+    issuedDate: string | null;
+    sendedDate: string | null;
+  } | null;
 }
