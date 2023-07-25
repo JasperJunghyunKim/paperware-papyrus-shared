@@ -39,6 +39,7 @@ export type OrderRequestItemListResponse = PaginationResponse<
       } | null;
       wantedDate: string | null;
       memo: string;
+      createdAt: string;
     };
   }
 >;
