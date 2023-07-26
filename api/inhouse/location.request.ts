@@ -6,6 +6,7 @@ export interface LocationCreateRequest {
   name: string;
   isPublic: boolean;
   address: string;
+  phoneNo?: string | null;
 }
 
 export type LocationUpdateRequest = LocationCreateRequest;
