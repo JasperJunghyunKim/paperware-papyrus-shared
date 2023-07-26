@@ -6,4 +6,5 @@ export default interface Warehouse {
   isPublic: boolean;
   company: Company;
   address: string;
+  phoneNo: string | null;
 }
