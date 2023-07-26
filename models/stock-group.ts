@@ -18,6 +18,8 @@ interface StockGroupOrder {
   orderNo: string;
   orderType: OrderType;
   partnerCompany: Company;
+  // srcCompany: Company;
+  // dstCompany: Company;
 }
 
 interface StockGroupPlan {
