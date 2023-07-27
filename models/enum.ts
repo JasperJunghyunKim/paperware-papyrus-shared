@@ -24,8 +24,9 @@ export type OrderStatus =
   | 'OFFER_REQUESTED'
   | 'OFFER_REJECTED'
   | 'ACCEPTED'
-  | 'ORDER_CANCELLED'
-  | 'OFFER_CANCELLED';
+  | 'ORDER_DELETED'
+  | 'OFFER_DELETED'
+  | 'CANCELLED';
 export type TaskStatus =
   | 'PREPARING'
   | 'PROGRESSING'
