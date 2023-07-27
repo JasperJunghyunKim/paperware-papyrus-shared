@@ -137,7 +137,8 @@ export type InvoiceStatus =
   | 'WAIT_LOADING'
   | 'WAIT_SHIPPING'
   | 'ON_SHIPPING'
-  | 'DONE_SHIPPING';
+  | 'DONE_SHIPPING'
+  | 'CANCELLED';
 export type TaxInvoiceStatus =
   | 'PREPARING'
   | 'ON_ISSUE'
