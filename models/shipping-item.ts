@@ -1,5 +1,5 @@
 import { Company } from '.';
-import { ShippingStatus } from './enum';
+import { InvoiceStatus, ShippingStatus } from './enum';
 
 export default interface ShippingItem {
   id: number;
@@ -8,6 +8,6 @@ export default interface ShippingItem {
   company: Company;
   invoiceCount: number;
   invoice: {
-    invoiceStatus: string;
+    invoiceStatus: InvoiceStatus;
   }[];
 }
