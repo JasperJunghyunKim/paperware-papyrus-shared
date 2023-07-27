@@ -44,4 +44,8 @@ export default interface Order {
     issuedDate: string | null;
     sendedDate: string | null;
   } | null;
+  purchaseSuppliedPrice?: number | null;
+  salesSuppliedPrice?: number | null;
+  salesProfit?: number | null;
+  salesProfitRate?: number | null;
 }
