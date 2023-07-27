@@ -7,4 +7,7 @@ export default interface ShippingItem {
   status: ShippingStatus;
   company: Company;
   invoiceCount: number;
+  invoice: {
+    invoiceStatus: string;
+  }[];
 }
