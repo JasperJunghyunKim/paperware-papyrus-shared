@@ -9,8 +9,10 @@ import {
 } from '.';
 import Company from './company';
 import {
+  InvoiceStatus,
   OrderStatus,
   OrderType,
+  TaskStatus,
   TaxInvoicePurposeType,
   TaxInvoiceStatus,
 } from './enum';
@@ -49,3 +51,16 @@ export default interface Order {
   salesProfit?: number | null;
   salesProfitRate?: number | null;
 }
+
+export type OrderListItem = Order & {
+  orderStock: {
+    plan: {
+      invoice: {
+        invoiceStatus: InvoiceStatus;
+      };
+      task: {
+        status: TaskStatus;
+      };
+    }[];
+  };
+};

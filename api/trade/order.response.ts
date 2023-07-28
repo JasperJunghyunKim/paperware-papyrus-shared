@@ -16,8 +16,9 @@ import {
   TradePrice,
 } from '../../models';
 import { OrderStatus, OrderType } from '../../models/enum';
+import { OrderListItem } from 'src/@shared/models/order';
 
-export type OrderListResponse = PaginationResponse<Order>;
+export type OrderListResponse = PaginationResponse<OrderListItem>;
 export type OrderItemResponse = Order;
 
 export type OrderStockArrivalListResponse = PaginationResponse<StockGroup>;
