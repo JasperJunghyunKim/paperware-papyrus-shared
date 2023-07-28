@@ -21,6 +21,67 @@ export interface OrderListQuery extends PaginationQuery {
   year?: string;
   /** month 특정 */
   month?: string;
+
+  /// 검색 필드
+  /**
+   * - orderType -
+   * 'NORMAL' |
+   * 'DEPOSIT' |
+   * 'NORMAL_DEPOSIT' |
+   * 'PROCESS' |
+   * 'ETC'
+   */
+  orderTypes?: string;
+  partnerCompanyRegistionNumbers?: string;
+  orderNo?: string;
+  minOrderDate?: string;
+  maxOrderDate?: string;
+  minWantedDate?: string;
+  maxWantedDate?: string;
+  /**
+   * - orderStatus -
+   * 'ORDER_PREPARING' |
+   * 'ORDER_REQUESTED' |
+   * 'ORDER_REJECTED' |
+   * 'OFFER_PREPARING' |
+   * 'OFFER_REQUESTED' |
+   * 'OFFER_REJECTED' |
+   * 'ACCEPTED' |
+   * 'CANCELLED'
+   */
+  orderStatus?: string;
+  /**
+   * - taskStatus -
+   * PREPARING |
+   * PROGRESSING |
+   * PROGRESSED
+   */
+  taskStatus?: string;
+  /**
+   * - releaseStatus -
+   * PREPARING |
+   * PROGRESSED
+   */
+  releaseStatus?: string;
+  /**
+   * - invoiceStatus -
+   * WAIT_SHIPPING |
+   * ON_SHIPPING |
+   * DONE_SHIPPING
+   */
+  invoiceStatus?: string;
+  packagingIds?: string;
+  paperTypeIds?: string;
+  manufacturerIds?: string;
+  minGrammage?: number;
+  maxGrammage?: number;
+  sizeX?: number;
+  sizeY?: number;
+  /**
+   * - bookCloseMethod -
+   * TAX_INVOICE
+   */
+  bookCloseMethods?: string;
 }
 
 export interface OrderStockCreateRequest {
