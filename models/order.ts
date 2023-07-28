@@ -12,6 +12,7 @@ import {
   PaperPattern,
   Plan,
   Product,
+  StockEvent,
   TaxInvoice,
   TradePrice,
 } from '.';
@@ -21,6 +22,8 @@ import {
   InvoiceStatus,
   OrderStatus,
   OrderType,
+  PlanStatus,
+  PlanType,
   TaskStatus,
   TaxInvoicePurposeType,
   TaxInvoiceStatus,
@@ -111,14 +114,34 @@ export type OrderListItem = Order & {
     srcWantedDate: string;
     dstWantedDate: string;
     order: Order;
-    plan: (Plan & {
+    plan: {
+      id: number;
+      planNo: string;
+      status: PlanStatus;
+      type: PlanType;
+      company: Company;
+      createdAt: string;
+      assignStockEvent: StockEvent | null;
+      targetStockEvent: StockEvent[];
+      orderStock: {
+        dstLocation: Model.Location;
+        wantedDate: string;
+        order: Order;
+      } | null;
+      orderProcess: {
+        dstLocation: Model.Location;
+        dstWantedDate: string;
+        srcLocation: Model.Location;
+        srcWantedDate: string;
+        order: Order;
+      } | null;
       task: {
         status: TaskStatus;
       }[];
       invoice: {
         invoiceStatus: InvoiceStatus;
       }[];
-    })[];
+    }[];
     // 외주공정의 주문 원지 정보
     company: Company;
     planId: number | null;
