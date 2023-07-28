@@ -63,4 +63,14 @@ export type OrderListItem = Order & {
       };
     }[];
   };
+  orderProcess: {
+    plan: {
+      invoice: {
+        invoiceStatus: InvoiceStatus;
+      };
+      task: {
+        status: TaskStatus;
+      };
+    }[];
+  };
 };
