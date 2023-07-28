@@ -1,12 +1,21 @@
 import {
   DepositEvent,
+  Enum,
   OrderDeposit,
   OrderEtc,
   OrderProcess,
   OrderStock,
+  Packaging,
+  PaperCert,
+  PaperColor,
+  PaperColorGroup,
+  PaperPattern,
+  Plan,
+  Product,
   TaxInvoice,
   TradePrice,
 } from '.';
+import { Model } from '..';
 import Company from './company';
 import {
   InvoiceStatus,
@@ -54,23 +63,80 @@ export default interface Order {
 
 export type OrderListItem = Order & {
   orderStock: {
+    id: number;
+    orderId: number;
+    dstLocation: Location;
+    wantedDate: string;
+    isDirectShipping: boolean;
     plan: {
-      invoice: {
-        invoiceStatus: InvoiceStatus;
-      };
+      id: number;
+      planNo: string;
+      type: Enum.PlanType;
+      status: Enum.PlanStatus;
+      assignStockEvent: Model.StockEvent;
+      companyId: number;
       task: {
         status: TaskStatus;
-      };
+      }[];
+      invoice: {
+        invoiceStatus: InvoiceStatus;
+      }[];
     }[];
+    // 정상거래의 주문 원지 정보
+    company: Company;
+    planId: number | null;
+    warehouse: {
+      id: number;
+      name: string;
+      isPublic: boolean;
+      address: string;
+    } | null;
+    product: Product;
+    packaging: Packaging;
+    grammage: number;
+    sizeX: number;
+    sizeY: number;
+    paperColorGroup: PaperColorGroup | null;
+    paperColor: PaperColor | null;
+    paperPattern: PaperPattern | null;
+    paperCert: PaperCert | null;
+    quantity: number;
   };
   orderProcess: {
-    plan: {
-      invoice: {
-        invoiceStatus: InvoiceStatus;
-      };
+    id: number;
+    srcLocation: Location;
+    dstLocation: Location;
+    isSrcDirectShipping: boolean;
+    isDstDirectShipping: boolean;
+    srcWantedDate: string;
+    dstWantedDate: string;
+    order: Order;
+    plan: (Plan & {
       task: {
         status: TaskStatus;
-      };
-    }[];
+      }[];
+      invoice: {
+        invoiceStatus: InvoiceStatus;
+      }[];
+    })[];
+    // 외주공정의 주문 원지 정보
+    company: Company;
+    planId: number | null;
+    warehouse: {
+      id: number;
+      name: string;
+      isPublic: boolean;
+      address: string;
+    } | null;
+    product: Product;
+    packaging: Packaging;
+    grammage: number;
+    sizeX: number;
+    sizeY: number;
+    paperColorGroup: PaperColorGroup | null;
+    paperColor: PaperColor | null;
+    paperPattern: PaperPattern | null;
+    paperCert: PaperCert | null;
+    quantity: number;
   };
 };
