@@ -193,6 +193,12 @@ export interface OrderDepositCreateRequest {
   memo?: string;
 }
 
+/** 보관 등록 공통정보 수정 */
+export interface OrderDepositUpdateRequest {
+  orderDate: string;
+  memo?: string;
+}
+
 /** 보관 원지 수정 */
 export interface OrderDepositUpdateAssignRequest {
   productId: number;
