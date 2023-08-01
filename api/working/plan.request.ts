@@ -1,4 +1,3 @@
-import { TaskStatus } from 'src/@shared/models/enum';
 import { PaginationQuery } from '../../models/pagination';
 
 export type PlanListQueryType = 'INHOUSE' | 'DEFAULT';
