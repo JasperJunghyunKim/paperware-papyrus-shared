@@ -7,3 +7,8 @@ export interface AccountUpdateRequest {
 export interface AccountPasswordUpdateRequest {
   password: string;
 }
+
+export interface AccountPhoneNoUpdateRequest {
+  phoneNo: string;
+  authKey: string;
+}
