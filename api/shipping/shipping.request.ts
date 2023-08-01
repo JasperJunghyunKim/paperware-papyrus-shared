@@ -1,6 +1,9 @@
 import { PaginationQuery } from '../../models/pagination';
 
-export type ShippingListQuery = PaginationQuery;
+export type ShippingListQuery = PaginationQuery & {
+  // WAIT_SHIPPING | ON_SHIPPING | DONE_SHIPPING
+  invoiceStatus?: string;
+};
 
 export interface ShippingCreateRequest {}
 
