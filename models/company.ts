@@ -10,4 +10,5 @@ export default interface Company {
   phoneNo: string;
   faxNo: string;
   managedById: number | null;
+  createdAt: string;
 }
