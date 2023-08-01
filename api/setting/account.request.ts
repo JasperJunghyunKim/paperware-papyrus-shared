@@ -3,3 +3,7 @@ export interface AccountUpdateRequest {
   birthDate: string;
   email: string;
 }
+
+export interface AccountPasswordUpdateRequest {
+  password: string;
+}
