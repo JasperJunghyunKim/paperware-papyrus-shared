@@ -1,9 +1,4 @@
-import {
-  DepositType,
-  DiscountType,
-  OfficialPriceType,
-  PriceUnit,
-} from '../../models/enum';
+import { DiscountType, OfficialPriceType, PriceUnit } from '../../models/enum';
 import { Api } from '../..';
 import { PaginationQuery } from '../../models/pagination';
 
