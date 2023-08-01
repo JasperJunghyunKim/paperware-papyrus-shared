@@ -6,4 +6,6 @@ export default interface User {
   username: string;
   name: string;
   email: string | null;
+  phoneNo: string | null;
+  birthDate: string | null;
 }
