@@ -14,3 +14,8 @@ export interface FindIdResponse {
     createdAt: string;
   }[];
 }
+
+export interface FindPasswordResponse {
+  userId: number;
+  authKey: string;
+}
