@@ -13,3 +13,10 @@ export interface UserCreateRequest {
   birthDate: string;
   email: string;
 }
+
+export interface UserUpdateRequest {
+  password?: string; // 빈값 or undefined면 업데이트 하지 않음
+  name: string;
+  birthDate: string;
+  email: string;
+}
