@@ -6,3 +6,11 @@ export interface LoginResponse {
 export interface AuthNoCheckResponse {
   authKey: string;
 }
+
+export interface FindIdResponse {
+  items: {
+    companyName: string;
+    username: string;
+    createdAt: string;
+  }[];
+}
