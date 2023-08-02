@@ -8,5 +8,6 @@ export default interface User {
   email: string | null;
   phoneNo: string | null;
   birthDate: string | null;
+  isActivated: boolean;
   isAdmin: boolean;
 }
