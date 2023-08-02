@@ -1,5 +1,5 @@
 import { Model } from '../..';
-import { PaginationResponse } from 'src/@shared/models/pagination';
+import { PaginationResponse } from '../../models/pagination';
 
 export type SettingUserListReseponse = PaginationResponse<
   Omit<Model.User, 'company'>
