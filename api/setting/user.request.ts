@@ -20,3 +20,7 @@ export interface UserUpdateRequest {
   birthDate: string;
   email: string;
 }
+
+export interface UserActivatedUpdateRequest {
+  isActivated: boolean;
+}
