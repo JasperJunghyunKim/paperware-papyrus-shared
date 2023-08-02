@@ -32,6 +32,7 @@ import TaskConverting from './task-converting';
 import TaskGuillotine from './task-guillotine';
 import TaskQuantity from './task-quantity';
 import User from './user';
+import UserMenu from './user-menu';
 import Warehouse from './warehouse';
 
 import Accounted from './accounted';
@@ -118,6 +119,7 @@ export type {
   TaskQuantity,
   TradePrice,
   User,
+  UserMenu,
   Warehouse,
   Deposit,
   DepositEvent,

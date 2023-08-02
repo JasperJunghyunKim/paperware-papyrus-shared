@@ -1,4 +1,5 @@
 import Company from './company';
+import UserMenu from './user-menu';
 
 export default interface User {
   id: number;
@@ -10,7 +11,5 @@ export default interface User {
   birthDate: string | null;
   isActivated: boolean;
   isAdmin: boolean;
-  menu: {
-    menu: string;
-  } | null;
+  menu: UserMenu | null;
 }
