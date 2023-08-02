@@ -10,4 +10,7 @@ export default interface User {
   birthDate: string | null;
   isActivated: boolean;
   isAdmin: boolean;
+  menu: {
+    menu: string;
+  } | null;
 }

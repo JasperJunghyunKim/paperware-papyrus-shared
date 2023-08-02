@@ -24,3 +24,7 @@ export interface UserUpdateRequest {
 export interface UserActivatedUpdateRequest {
   isActivated: boolean;
 }
+
+export interface UserMenuUpdateRequest {
+  menu: string;
+}
