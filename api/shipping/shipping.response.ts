@@ -8,3 +8,7 @@ export type ShippingResponse = Model.ShippingItem;
 export type ShippingCreateResponse = {
   id: number;
 };
+
+export type ShippingUpdateResponse = {
+  id: number;
+};

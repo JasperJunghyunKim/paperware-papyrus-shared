@@ -17,3 +17,10 @@ export interface ShippingCreateRequest {
 export interface ShippingConnectInvoicesRequest {
   invoiceIds: number[];
 }
+
+/** 배송정보 수정 */
+export interface ShippingUpdateRequest {
+  companyRegistrationNumber?: string;
+  price: number;
+  memo?: string;
+}
