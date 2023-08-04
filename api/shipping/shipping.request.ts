@@ -8,7 +8,7 @@ export type ShippingListQuery = PaginationQuery & {
 
 export interface ShippingCreateRequest {
   type: ShippingType;
-  userId?: number;
+  managerId?: number;
   companyRegistrationNumber?: string;
   price?: number;
   memo?: string;
