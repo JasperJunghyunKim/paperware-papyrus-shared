@@ -4,6 +4,14 @@ import { PaginationQuery } from '../../models/pagination';
 export type ShippingListQuery = PaginationQuery & {
   // WAIT_SHIPPING | ON_SHIPPING | DONE_SHIPPING
   invoiceStatus?: string;
+  // INHOUSE | OUTSOURCE | PARTNER_PICKUP
+  types?: string;
+  shippingNo?: string;
+  managerIds?: string;
+  partnerCompanyRegistrationNumbers?: string;
+  memo?: string;
+  minCreatedAt?: string;
+  maxCreatedAt?: string;
 };
 
 export interface ShippingCreateRequest {
