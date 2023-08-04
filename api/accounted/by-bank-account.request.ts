@@ -21,4 +21,6 @@ export type ByBankAccountUpdateRequest = Omit<
   | 'accountName'
   | 'accountNumber'
   | 'bankComapny'
+  | 'accountedType'
+  | 'accountedMethod'
 >;
