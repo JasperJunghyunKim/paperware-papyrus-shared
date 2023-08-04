@@ -30,4 +30,7 @@ export type ByCardUpdateRequest = Omit<
   | 'accountName'
   | 'bankAccountNumber'
   | 'bankComapny'
+  | 'accountedType'
+  | 'accountedMethod'
+  | 'totalAmount'
 >;
