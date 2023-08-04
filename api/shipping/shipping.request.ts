@@ -24,3 +24,8 @@ export interface ShippingUpdateRequest {
   price: number;
   memo?: string;
 }
+
+/** 담당자 배정 */
+export interface ShippingAssignMangerRequest {
+  managerId: number;
+}
