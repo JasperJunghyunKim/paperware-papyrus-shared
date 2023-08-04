@@ -6,7 +6,6 @@ export type DiscountRateUnit =
   | 'WON_PER_REAM'
   | 'WON_PER_BOX'
   | 'PERCENT';
-export type ShippingType = 'DELIVERY' | 'PICKUP' | 'STORE';
 export type StockEventStatus = 'NORMAL' | 'CANCELLED' | 'PENDING';
 export type TaskType = 'CONVERTING' | 'GUILLOTINE' | 'RELEASE';
 export type DiscountType = 'NONE' | 'MANUAL_NONE' | 'DEFAULT' | 'SPECIAL';
@@ -153,3 +152,4 @@ export type OrderRequestItemStatus =
   | 'ON_CHECKING'
   | 'DONE'
   | 'CANCELLED';
+export type ShippingType = 'INHOUSE' | 'OUTSOURCE' | 'PARTNER_PICKUP';
