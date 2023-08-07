@@ -13,4 +13,6 @@ export type CardCreateRequest = {
 };
 
 /** 카드 수정 */
-export type CardUpdateRequest = Pick<Card, 'cardName'>;
+export type CardUpdateRequest = {
+  cardName: string;
+};
