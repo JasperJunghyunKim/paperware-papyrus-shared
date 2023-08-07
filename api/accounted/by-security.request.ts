@@ -11,7 +11,7 @@ export type BySecurityCreateRequest = Omit<
   | 'bySecurityId'
 > & {
   securityId: number;
-  security?: Omit<Security, 'securityId' | 'securityStatus' | 'drawedStatus'>;
+  security?: Omit<Security, 'id' | 'securityStatus' | 'drawedStatus'>;
 };
 
 export type BySecurityUpdateRequest = Omit<

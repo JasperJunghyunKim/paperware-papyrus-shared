@@ -7,7 +7,7 @@ export default interface Security {
   /**
    * 유가증권 식별자
    */
-  securityId: number;
+  id: number;
   /**
    * 유가증권 타입
    */
@@ -31,39 +31,39 @@ export default interface Security {
   /**
    * 발행일
    */
-  drawedDate: string;
+  drawedDate: string | null;
   /**
    * 발행 은행
    */
-  drawedBank: Bank;
+  drawedBank: Bank | null;
   /**
    * 발행 은행 지점
    */
-  drawedBankBranch: string;
+  drawedBankBranch: string | null;
   /**
    * 발행 지역
    */
-  drawedRegion: string;
+  drawedRegion: string | null;
   /**
    * 발행인
    */
-  drawer: string;
+  drawer: string | null;
   /**
    * 만기일
    */
-  maturedDate: string;
+  maturedDate: string | null;
   /**
    * 지급은행
    */
-  payingBank: Bank;
+  payingBank: Bank | null;
   /**
    * 지급은행 지점
    */
-  payingBankBranch: string;
+  payingBankBranch: string | null;
   /**
    * 지급인
    */
-  payer: string;
+  payer: string | null;
   /**
    * 메모
    */
