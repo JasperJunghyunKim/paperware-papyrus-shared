@@ -4,11 +4,11 @@ export default interface BankAccount {
   /**
    * 계좌 식별자
    */
-  accountId: number;
+  id: number;
   /**
    * 은행 이름
    */
-  bankComapny: Bank;
+  bank: Bank;
   /**
    * 계좌 이름
    */
