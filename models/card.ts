@@ -4,15 +4,15 @@ export default interface Card {
   /**
    * 카드 식별자
    */
-  cardId: number;
-  /**
-   * 카드 이름
-   */
-  cardName: string;
+  id: number;
   /**
    * 카드 회사
    */
   cardCompany: CardCompany;
+  /**
+   * 카드 이름
+   */
+  cardName: string;
   /**
    * 카드 번호
    */
