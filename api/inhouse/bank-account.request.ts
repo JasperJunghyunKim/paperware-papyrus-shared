@@ -1,8 +1,7 @@
-import { AccountType, Bank } from 'src/@shared/models/enum';
-import BankAccount from '../../models/bank-account';
+import { AccountType, Bank } from '../../models/enum';
 import { PaginationQuery } from '../../models/pagination';
 
-export type BankAccountQuery = PaginationQuery;
+export type BankAccountListQuery = PaginationQuery;
 
 /** 계좌 등록 */
 export type BankAccountCreateRequest = {
