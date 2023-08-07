@@ -16,6 +16,14 @@ export type AccountedByBankAccountCreatedRequest = {
 };
 
 /** 수금/지급 등록 (현금) */
+export type AccountedByCashCreatedRequest = {
+  accountedType: AccountedType;
+  companyRegistrationNumber: string;
+  accountedDate: string;
+  accountedSubject: Subject;
+  amount: number;
+  memo?: string;
+};
 
 /** 미수금&미지급 목록 */
 export interface AccountedUnpaidListQuery extends PaginationQuery {
