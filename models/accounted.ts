@@ -13,7 +13,6 @@ export default interface Accounted {
   accountedDate: string;
   accountedMethod: Method;
   accountedSubject: Subject;
-  amount: number;
   memo: string;
   byBankAccount: ByBankAccount | null;
   byCard: ByCard | null;
