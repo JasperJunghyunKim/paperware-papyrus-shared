@@ -1,6 +1,6 @@
 import Security from '../../models/security';
 import { PaginationQuery } from '../../models/pagination';
-import { Bank, SecurityType } from '../../models/enum';
+import { Bank, SecurityStatus, SecurityType } from '../../models/enum';
 
 export type SecurityListQuery = PaginationQuery;
 
@@ -21,9 +21,7 @@ export type SecurityCreateRequest = {
   memo?: string;
 };
 
-export type SecurityUpdateRequest = Omit<Security, 'id' | 'bySecurities'>;
-
-export type SecurityUpdateStatusRequest = Pick<
-  Security,
-  'memo' | 'securityStatus'
->;
+/** 유가증권 상태 수정 */
+export type SecurityStatusUpdateRequest = {
+  securityStatus: SecurityStatus;
+};
