@@ -59,6 +59,21 @@ export type AccountedByCashCreatedRequest = {
   memo?: string;
 };
 
+/** 수금/지급 등록 (카드입금) */
+export type AccountedByCardCreatedRequest = {
+  accountedType: AccountedType;
+  companyRegistrationNumber: string;
+  accountedDate: string;
+  accountedSubject: Subject;
+  cardAmount: number; // 카드입금금액
+  vatPrice?: number; // 수수료
+  isCharge: boolean; // 수수료 포함 여부
+  memo?: string;
+  approvalNumber?: string; // 승인번호
+  cardId?: number; // 지급시 필수
+  bankAccountId?: number; // 수금시 필수
+};
+
 /** 미수금&미지급 목록 */
 export interface AccountedUnpaidListQuery extends PaginationQuery {
   accountedType: AccountedType;
