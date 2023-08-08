@@ -74,6 +74,15 @@ export type AccountedByCardCreatedRequest = {
   bankAccountId?: number; // 수금시 필수
 };
 
+/** 수금/지급 등록 (상계) */
+export type AccountedByOffsetCreatedRequest = {
+  companyRegistrationNumber: string;
+  accountedDate: string;
+  accountedSubject: Subject;
+  amount: number;
+  memo?: string;
+};
+
 /** 미수금&미지급 목록 */
 export interface AccountedUnpaidListQuery extends PaginationQuery {
   accountedType: AccountedType;
