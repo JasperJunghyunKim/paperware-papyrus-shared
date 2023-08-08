@@ -116,6 +116,14 @@ export type AccountedByEtcCreatedRequest = {
   memo?: string;
 };
 
+/** 수금/지급 수정 (계좌이체) */
+export type AccountedByBankAccountUpdateRequest = {
+  accountedDate: string;
+  accountedSubject: Subject;
+  amount: number;
+  memo?: string;
+};
+
 /** 미수금&미지급 목록 */
 export interface AccountedUnpaidListQuery extends PaginationQuery {
   accountedType: AccountedType;
