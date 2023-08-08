@@ -8,7 +8,30 @@ import {
 } from '../../models/enum';
 
 /** 수금/지급 목록 */
-export type AccountedListQuery = PaginationQuery & {};
+export type AccountedListQuery = PaginationQuery & {
+  accountedType: AccountedType;
+  /// 검색
+  companyRegistrationNumbers?: string;
+  minAccountedDate?: string;
+  maxAccountedDate?: string;
+  /** "ACCOUNTS_RECEIVABLE" |
+   * "UNPAID" |
+   * "ADVANCES" |
+   * "MISCELLANEOUS_INCOME" |
+   * "PRODUCT_SALES" |
+   * "ETC"
+   * */
+  accountedSubjects?: string;
+  /**
+   * 'ACCOUNT_TRANSFER'|
+   * 'PROMISSORY_NOTE'|
+   * 'CARD_PAYMENT'|
+   * 'CASH'|
+   * 'OFFSET'|
+   * 'ETC'
+   */
+  accountedMethods?: string;
+};
 
 /** 수금/지급 등록 (계좌이체) */
 export type AccountedByBankAccountCreatedRequest = {

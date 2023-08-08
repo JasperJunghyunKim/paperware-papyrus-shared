@@ -37,8 +37,7 @@ export type Method =
   | 'CARD_PAYMENT'
   | 'CASH'
   | 'OFFSET'
-  | 'ETC'
-  | 'All';
+  | 'ETC';
 export type Subject =
   /// paid: 외상 매출금 collected: 외상 매입금
   | 'ACCOUNTS_RECEIVABLE'
@@ -50,8 +49,7 @@ export type Subject =
   | 'MISCELLANEOUS_INCOME'
   /// paid: 상품 매출 collected: 상품 매입
   | 'PRODUCT_SALES'
-  | 'ETC'
-  | 'All';
+  | 'ETC';
 export type AccountedType = 'PAID' | 'COLLECTED';
 export type OfficialPriceMapType = 'WHOLESALE' | 'RETAIL';
 export type AccountType = 'DEPOSIT';
