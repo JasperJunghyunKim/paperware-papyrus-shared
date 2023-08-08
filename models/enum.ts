@@ -96,7 +96,6 @@ export type DiscountRateMapType = 'BASIC' | 'SPECIAL';
 export type DiscountRateType = 'SALES' | 'PURCHASE';
 export type SecurityStatus =
   | 'NONE'
-  | 'ENDORSED'
   | 'NORMAL_PAYMENT'
   | 'DISCOUNT_PAYMENT'
   | 'INSOLVENCY'

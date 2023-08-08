@@ -1,8 +1,12 @@
-import { Bank, DrawedStatus, SecurityStatus, SecurityType } from './enum';
+import { Bank, EndorsementType, SecurityStatus, SecurityType } from './enum';
 
-/**
- * 유가증권
- */
+interface BySecurity {
+  id: number;
+  endorsementType: EndorsementType;
+  endorsement: string;
+  accounted: any;
+}
+
 export default interface Security {
   /**
    * 유가증권 식별자
@@ -24,10 +28,6 @@ export default interface Security {
    * 유가증권 상태
    */
   securityStatus: SecurityStatus;
-  /**
-   * 발행 상태
-   */
-  drawedStatus: DrawedStatus;
   /**
    * 발행일
    */
@@ -68,4 +68,6 @@ export default interface Security {
    * 메모
    */
   memo: string;
+
+  bySecurities: BySecurity[];
 }

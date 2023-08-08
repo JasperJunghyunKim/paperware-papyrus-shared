@@ -21,7 +21,7 @@ export type SecurityCreateRequest = {
   memo?: string;
 };
 
-export type SecurityUpdateRequest = Omit<Security, 'id'>;
+export type SecurityUpdateRequest = Omit<Security, 'id' | 'bySecurities'>;
 
 export type SecurityUpdateStatusRequest = Pick<
   Security,
