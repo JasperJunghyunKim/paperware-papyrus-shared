@@ -83,6 +83,16 @@ export type AccountedByOffsetCreatedRequest = {
   memo?: string;
 };
 
+/** 수금/지급 등록 (기타) */
+export type AccountedByEtcCreatedRequest = {
+  accountedType: AccountedType;
+  companyRegistrationNumber: string;
+  accountedDate: string;
+  accountedSubject: Subject;
+  amount: number;
+  memo?: string;
+};
+
 /** 미수금&미지급 목록 */
 export interface AccountedUnpaidListQuery extends PaginationQuery {
   accountedType: AccountedType;
