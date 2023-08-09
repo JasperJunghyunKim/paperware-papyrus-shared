@@ -1,22 +1,12 @@
 import {
   DepositEvent,
-  Enum,
   OrderDeposit,
   OrderEtc,
   OrderProcess,
+  OrderRefund,
   OrderStock,
-  Packaging,
-  PaperCert,
-  PaperColor,
-  PaperColorGroup,
-  PaperPattern,
-  Plan,
-  Product,
-  StockEvent,
-  TaxInvoice,
   TradePrice,
 } from '.';
-import { Model } from '..';
 import Company from './company';
 import {
   OrderStatus,
@@ -42,6 +32,7 @@ export default interface Order {
   orderDeposit: OrderDeposit | null;
   orderProcess: OrderProcess | null;
   orderEtc: OrderEtc | null;
+  orderRefund: OrderRefund | null;
   depositEvent: DepositEvent | null;
   tradePrice: TradePrice[];
   taxInvoice: {

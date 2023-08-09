@@ -341,3 +341,13 @@ export interface OrderEtcUpdateRequest {
   item: string;
   memo: string;
 }
+
+/** 환불 등록 */
+export interface OrderRefundCreateRequest {
+  srcCompanyId: number;
+  dstCompanyId: number;
+  originOrderNo?: string;
+  orderDate: string;
+  item: string;
+  memo?: string;
+}
