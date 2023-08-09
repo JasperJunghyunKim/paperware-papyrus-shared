@@ -124,6 +124,17 @@ export type AccountedByBankAccountUpdateRequest = {
   memo?: string;
 };
 
+/** 수금/지급 수정 (카드) */
+export type AccountedByCardUpdateRequest = {
+  accountedDate: string;
+  accountedSubject: Subject;
+  cardAmount: number;
+  vatPrice?: number;
+  isCharge: boolean;
+  approvalNumber?: string;
+  memo?: string;
+};
+
 /** 수금/지급 수정 (현금) */
 export type AccountedByCashUpdateRequest = {
   accountedDate: string;
