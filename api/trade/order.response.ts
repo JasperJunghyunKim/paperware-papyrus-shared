@@ -6,6 +6,7 @@ import {
   OrderDeposit,
   OrderEtc,
   OrderProcess,
+  OrderRefund,
   Packaging,
   PaperCert,
   PaperColor,
@@ -76,3 +77,6 @@ export type OrderProcessResponse = OrderProcess;
 
 /** 기타거래 상세 */
 export type OrderEtcResponse = OrderEtc;
+
+/** 환불 상세 */
+export type OrderRefundResponse = OrderRefund;
