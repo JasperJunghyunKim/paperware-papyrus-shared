@@ -50,7 +50,6 @@ export type AccountedBySecurityCreatedRequest = {
   companyRegistrationNumber: string;
   accountedDate: string;
   accountedSubject: Subject;
-  amount: number;
   memo?: string;
   endorsementType: EndorsementType; // 배서구분
   endorsement?: string; // 배서자
