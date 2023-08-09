@@ -132,6 +132,14 @@ export type AccountedByCashUpdateRequest = {
   memo?: string;
 };
 
+/** 수금/지급 수정 (기타) */
+export type AccountedByEtcUpdateRequest = {
+  accountedDate: string;
+  accountedSubject: Subject;
+  amount: number;
+  memo?: string;
+};
+
 /** 수금/지급 수정 (상계) */
 export type AccountedByOffsetUpdateRequest = {
   accountedDate: string;
