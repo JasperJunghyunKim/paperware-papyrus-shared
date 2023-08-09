@@ -134,6 +134,33 @@ export type AccountedByCardUpdateRequest = {
   memo?: string;
 };
 
+/** 수금/지급 수정 (유가증권) */
+export type AccountedBySecurityUpdateRequest = {
+  accountedDate: string;
+  accountedSubject: Subject;
+  memo?: string;
+  // 수금일때만 수정가능
+  endorsementType?: EndorsementType; // 배서구분
+  // 수금일때만 수정가능
+  endorsement?: string; // 배서자
+  // 수금(기본상태)일때만 수정 가능
+  security?: {
+    securityType: SecurityType;
+    securitySerial: string;
+    securityAmount: number;
+    drawedDate?: string;
+    drawedBank?: Bank;
+    drawedBankBranch?: string;
+    drawedRegion?: string;
+    drawer?: string;
+    maturedDate?: string;
+    payingBank?: Bank;
+    payingBankBranch?: string;
+    payer?: string;
+    memo?: string;
+  };
+};
+
 /** 수금/지급 수정 (현금) */
 export type AccountedByCashUpdateRequest = {
   accountedDate: string;
