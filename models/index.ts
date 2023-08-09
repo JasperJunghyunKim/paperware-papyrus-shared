@@ -61,6 +61,7 @@ import OrderDeposit from './order-deposit';
 import OrderProcess from './order-process';
 import OrderEtc from './order-etc';
 import OrderRefund from './order-refund';
+import OrderReturn from './order-return';
 import ArrivalStock from './arrival-stock';
 import DiscountRateCondition from './discount-rate-condition';
 
@@ -128,6 +129,7 @@ export type {
   OrderProcess,
   OrderEtc,
   OrderRefund,
+  OrderReturn,
   ArrivalStock,
   DiscountRateCondition,
   OrderDepositTradePrice,

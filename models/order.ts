@@ -4,6 +4,7 @@ import {
   OrderEtc,
   OrderProcess,
   OrderRefund,
+  OrderReturn,
   OrderStock,
   TradePrice,
 } from '.';
@@ -33,6 +34,7 @@ export default interface Order {
   orderProcess: OrderProcess | null;
   orderEtc: OrderEtc | null;
   orderRefund: OrderRefund | null;
+  orderReturn: OrderReturn | null;
   depositEvent: DepositEvent | null;
   tradePrice: TradePrice[];
   taxInvoice: {

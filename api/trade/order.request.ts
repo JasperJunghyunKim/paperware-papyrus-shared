@@ -351,3 +351,25 @@ export interface OrderRefundCreateRequest {
   item: string;
   memo?: string;
 }
+
+/** 반품 등록 */
+export interface OrderReturnCreateRequest {
+  srcCompanyId: number;
+  dstCompanyId: number;
+  originOrderNo?: string | null;
+  orderDate: string;
+  wantedDate: string;
+  locationId: number;
+  memo?: string;
+  // 원지 스펙
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroupId?: number | null;
+  paperColorId?: number | null;
+  paperPatternId?: number | null;
+  paperCertId?: number | null;
+  quantity: number;
+}

@@ -7,6 +7,7 @@ import {
   OrderEtc,
   OrderProcess,
   OrderRefund,
+  OrderReturn,
   Packaging,
   PaperCert,
   PaperColor,
@@ -80,3 +81,6 @@ export type OrderEtcResponse = OrderEtc;
 
 /** 환불 상세 */
 export type OrderRefundResponse = OrderRefund;
+
+/** 반품 상세 */
+export type OrderReturnResponse = OrderReturn;
