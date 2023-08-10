@@ -10,6 +10,7 @@ import {
 } from '.';
 import Company from './company';
 import {
+  OrderHistoryType,
   OrderStatus,
   OrderType,
   TaxInvoicePurposeType,
@@ -51,4 +52,14 @@ export default interface Order {
   salesSuppliedPrice?: number | null;
   salesProfit?: number | null;
   salesProfitRate?: number | null;
+  histories: {
+    id: number;
+    type: OrderHistoryType;
+    createdAt: string;
+    user: {
+      id: number;
+      name: string;
+      company: Company;
+    };
+  }[];
 }

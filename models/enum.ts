@@ -158,3 +158,15 @@ export type OrderRequestItemStatus =
   | 'DONE'
   | 'CANCELLED';
 export type ShippingType = 'INHOUSE' | 'OUTSOURCE' | 'PARTNER_PICKUP';
+export type OrderHistoryType =
+  | 'CREATE'
+  | 'ACCEPT'
+  | 'PLAN_START'
+  | 'PLAN_CANCEL'
+  | 'ORDER_CANCEL'
+  | 'OFFER_REQUEST'
+  | 'OFFER_REQUEST_CANCEL'
+  | 'OFFER_REQUEST_REJECT'
+  | 'ORDER_REQUEST'
+  | 'ORDER_REQUEST_CANCEL'
+  | 'ORDER_REQUEST_REJECT';
