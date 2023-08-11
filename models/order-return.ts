@@ -14,6 +14,7 @@ import { Model } from '..';
 export default interface OrderReturn {
   id: number;
   orderId: number;
+  originOrderNo: string | null;
   dstLocation: Location;
   wantedDate: string;
   plan: {
