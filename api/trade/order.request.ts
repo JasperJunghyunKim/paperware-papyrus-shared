@@ -352,6 +352,15 @@ export interface OrderRefundCreateRequest {
   memo?: string;
 }
 
+/** 환불 수정 */
+export interface OrderRefundUpdateRequest {
+  originOrderNo?: string;
+  orderDate: string;
+  item?: string;
+  memo?: string;
+}
+
+
 /** 반품 등록 */
 export interface OrderReturnCreateRequest {
   srcCompanyId: number;
@@ -373,3 +382,27 @@ export interface OrderReturnCreateRequest {
   paperCertId?: number | null;
   quantity: number;
 }
+
+/** 반품 수정 */
+export interface OrderReturnUpdateRequest {
+  originOrderNo?: string | null;
+  orderDate: string;
+  wantedDate: string;
+  locationId: number;
+  memo?: string;
+}
+
+/** 반품 원지 수정 */
+export interface OrderReturnUpdateStockRequest {
+  productId: number;
+  packagingId: number;
+  grammage: number;
+  sizeX: number;
+  sizeY: number;
+  paperColorGroupId?: number | null;
+  paperColorId?: number | null;
+  paperPatternId?: number | null;
+  paperCertId?: number | null;
+  quantity: number;
+}
+
