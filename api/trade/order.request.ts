@@ -348,7 +348,7 @@ export interface OrderRefundCreateRequest {
   dstCompanyId: number;
   originOrderNo?: string;
   orderDate: string;
-  item: string;
+  item?: string;
   memo?: string;
 }
 
