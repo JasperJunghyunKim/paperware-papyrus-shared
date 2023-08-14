@@ -428,5 +428,6 @@ export interface OrderStockGroupCreateRequest {
     paperPatternId?: number | null;
     paperCertId?: number | null;
     quantity: number;
+    orderStatus?: 'OFFER_REQUESTED' | 'ACCEPTED'; // 매출일때만 사용
   }[];
 }
