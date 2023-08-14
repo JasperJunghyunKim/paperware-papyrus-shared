@@ -360,7 +360,6 @@ export interface OrderRefundUpdateRequest {
   memo?: string;
 }
 
-
 /** 반품 등록 */
 export interface OrderReturnCreateRequest {
   srcCompanyId: number;
@@ -406,3 +405,28 @@ export interface OrderReturnUpdateStockRequest {
   quantity: number;
 }
 
+/** 일괄 등록 */
+export interface OrderStockGroupCreateRequest {
+  orders: {
+    srcCompanyId: number;
+    dstCompanyId: number;
+    orderDate: string;
+    locationId: number;
+    wantedDate: string;
+    memo?: string | null;
+    isDirectShipping?: boolean;
+    // 원지 스펙
+    warehouseId?: number | null;
+    planId?: number | null;
+    productId: number;
+    packagingId: number;
+    grammage: number;
+    sizeX: number;
+    sizeY?: number;
+    paperColorGroupId?: number | null;
+    paperColorId?: number | null;
+    paperPatternId?: number | null;
+    paperCertId?: number | null;
+    quantity: number;
+  }[];
+}
