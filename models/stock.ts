@@ -29,6 +29,7 @@ interface Order {
   srcCompany: Company;
   dstCompany: Company;
   tradePrice: TradePrice[];
+  depositEventId: number;
 }
 
 interface OrderStock {
