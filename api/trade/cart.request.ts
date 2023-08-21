@@ -1,4 +1,10 @@
+import { PaginationQuery } from 'src/@shared/models/pagination';
 import { CartType } from '../../models/enum';
+
+/** 장바구니 목록 */
+export interface CartListQuery {
+  type: CartType;
+}
 
 /** 장바구니 품목 등록 */
 export interface CartCreateRequest {

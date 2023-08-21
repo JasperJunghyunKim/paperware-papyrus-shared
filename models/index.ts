@@ -68,6 +68,7 @@ import DiscountRateCondition from './discount-rate-condition';
 import TaxInvoice from './tax-invoice';
 import OrderRequest from './order-request';
 import OrderRequestItem from './order-request-item';
+import Cart from './cart';
 
 export * as Enum from './enum';
 export type {
@@ -137,4 +138,5 @@ export type {
   TaxInvoice,
   OrderRequest,
   OrderRequestItem,
+  Cart,
 };
