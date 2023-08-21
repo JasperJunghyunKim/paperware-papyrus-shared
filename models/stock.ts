@@ -1,4 +1,4 @@
-import { Enum, Plan, StockPrice } from '.';
+import { DepositEvent, Enum, Plan, StockPrice } from '.';
 import Company from './company';
 import { DiscountType, OfficialPriceType, PlanType, PriceUnit } from './enum';
 import Packaging from './packaging';
@@ -29,7 +29,7 @@ interface Order {
   srcCompany: Company;
   dstCompany: Company;
   tradePrice: TradePrice[];
-  depositEventId: number | null;
+  depositEvent: DepositEvent | null;
 }
 
 interface OrderStock {
