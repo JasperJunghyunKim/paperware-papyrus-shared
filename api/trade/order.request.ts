@@ -407,27 +407,12 @@ export interface OrderReturnUpdateStockRequest {
 
 /** 일괄 등록 */
 export interface OrderStockGroupCreateRequest {
-  orders: {
-    srcCompanyId: number;
-    dstCompanyId: number;
-    orderDate: string;
-    locationId: number;
-    wantedDate: string;
-    memo?: string | null;
-    isDirectShipping?: boolean;
-    // 원지 스펙
-    warehouseId?: number | null;
-    planId?: number | null;
-    productId: number;
-    packagingId: number;
-    grammage: number;
-    sizeX: number;
-    sizeY?: number;
-    paperColorGroupId?: number | null;
-    paperColorId?: number | null;
-    paperPatternId?: number | null;
-    paperCertId?: number | null;
-    quantity: number;
-    orderStatus?: 'OFFER_REQUESTED' | 'ACCEPTED'; // 매출일때만 사용
-  }[];
+  cartIds: number[];
+  srcCompanyId?: number | null;
+  orderDate: string;
+  locationId: number;
+  wantedDate: string;
+  memo?: string | null;
+  isDirectShipping?: boolean;
+  orderStatus?: 'OFFER_REQUESTED' | 'ACCEPTED'; // 매출일때만 사용
 }
