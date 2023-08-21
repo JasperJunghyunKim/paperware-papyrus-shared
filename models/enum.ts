@@ -170,3 +170,4 @@ export type OrderHistoryType =
   | 'ORDER_REQUEST'
   | 'ORDER_REQUEST_CANCEL'
   | 'ORDER_REQUEST_REJECT';
+export type CartType = 'SALES' | 'PURCHASE';
