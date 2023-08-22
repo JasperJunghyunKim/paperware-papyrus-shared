@@ -45,6 +45,7 @@ interface StockGroupPlan {
 }
 
 export default interface StockGroup {
+  companyId: number;
   warehouse: WarehouseWithoutCompany | null;
   product: Product;
   packaging: Packaging;
