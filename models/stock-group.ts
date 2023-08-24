@@ -1,4 +1,4 @@
-import { Location } from '.';
+import { DepositEvent, Location } from '.';
 import Company from './company';
 import { OrderType, PlanType } from './enum';
 import Packaging from './packaging';
@@ -20,6 +20,7 @@ interface StockGroupOrder {
   partnerCompany: Company;
   srcCompany: Company;
   dstCompany: Company;
+  // depositEvent: DepositEvent | null;
 }
 
 interface StockGroupPlan {
